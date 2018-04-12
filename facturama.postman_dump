@@ -74,6 +74,27 @@
 					"folderId": "862df05a-50c9-4383-9a61-17aebb32aa38"
 				},
 				{
+					"id": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc",
+					"name": "Cfdis",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"folder": null,
+					"order": [
+						"ab133a70-76f5-4f2a-a6cd-e6ca177ebdb4",
+						"af2b4fb4-ace7-473a-b946-38f42c1d76da",
+						"7aea8bd5-199b-4b5f-af99-0ce6c7908848",
+						"31314dbb-ead9-475a-beef-b965908ea0cb",
+						"4d7cbc60-89df-4dac-b033-ddcca79adc52",
+						"7269d0a6-ae53-433a-b870-270416cc8ef8",
+						"e9fa5051-6060-4368-9dcf-c4e3d90ba979"
+					],
+					"folders_order": [],
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"folderId": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc"
+				},
+				{
 					"id": "253bda3a-e4b4-4641-80b5-78902db8fb94",
 					"name": "Clientes",
 					"description": "",
@@ -104,27 +125,14 @@
 					"folder": null,
 					"order": [
 						"97584ec1-66a3-4781-8cd3-1eea12e3524b",
-						"47ec1283-cb1e-4527-a71f-6a7aa6f9abe5"
+						"47ec1283-cb1e-4527-a71f-6a7aa6f9abe5",
+						"31ab6a62-6326-476d-8db7-25ec11f727bb",
+						"f402f39b-fd47-47ec-9c58-1d2fcc2a000b",
+						"0b0a6dc2-fa02-41bd-9a29-c4c0a7ebe481"
 					],
 					"folders_order": [],
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
 					"folderId": "253bda3a-e4b4-4641-80b5-78902db8fb94"
-				},
-				{
-					"id": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc",
-					"name": "Facturar",
-					"description": "",
-					"auth": null,
-					"events": null,
-					"collection": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
-					"folder": null,
-					"order": [
-						"ab133a70-76f5-4f2a-a6cd-e6ca177ebdb4",
-						"af2b4fb4-ace7-473a-b946-38f42c1d76da"
-					],
-					"folders_order": [],
-					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
-					"folderId": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc"
 				},
 				{
 					"id": "7895de1c-94fb-4fe3-b2c1-040ac8a38402",
@@ -167,7 +175,11 @@
 					"collection": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
 					"folder": null,
 					"order": [
-						"915af482-0fc6-40f7-8f80-adcc785aa11b"
+						"915af482-0fc6-40f7-8f80-adcc785aa11b",
+						"96681785-80b7-4b7d-80bf-de66ef9454e1",
+						"85bff8e6-1e9d-469f-b8cf-9e3a4c46c2db",
+						"f914ee5d-c905-4507-a417-8756d3ddea66",
+						"edc25abe-d469-4b90-babb-2aa91d08d1d7"
 					],
 					"folders_order": [],
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
@@ -314,7 +326,7 @@
 				},
 				{
 					"id": "04df173f-9f0b-458a-afb0-6ac1134a9f1b",
-					"name": "Catálogo de Unidades",
+					"name": "Catálogo de unidades",
 					"url": "{{SERVER}}/Catalogs/Units?keyword=E48",
 					"description": "Catálogo de unidades del SAT",
 					"data": null,
@@ -367,8 +379,28 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "0b0a6dc2-fa02-41bd-9a29-c4c0a7ebe481",
+					"name": "Eliminar cliente",
+					"url": "{{SERVER}}/Client/xcOmZ4o9OzS6-nvRs11vhg2",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "253bda3a-e4b4-4641-80b5-78902db8fb94",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "108bbdcb-4c69-4ab4-9216-03160c1423cb",
-					"name": "Catálogo de Métodos de Pago",
+					"name": "Catálogo de métodos de pago",
 					"url": "{{SERVER}}/catalogs/PaymentMethods",
 					"description": "",
 					"data": null,
@@ -388,8 +420,8 @@
 				},
 				{
 					"id": "217cb73b-b03e-47cb-bc50-75335055ea91",
-					"name": "Catálogo de Monedas",
-					"url": "{{SERVER}}/catalogs/currencies?keyword=cano",
+					"name": "Catálogo de monedas",
+					"url": "{{SERVER}}/catalogs/currencies?keyword=mexicano",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -399,7 +431,7 @@
 					"queryParams": [
 						{
 							"key": "keyword",
-							"value": "cano",
+							"value": "mexicano",
 							"equals": true,
 							"description": "",
 							"enabled": true
@@ -441,8 +473,78 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "31314dbb-ead9-475a-beef-b965908ea0cb",
+					"name": "Cfdis filtrados por palabra clave",
+					"url": "{{SERVER}}/cfdi?type=Issued&keyword=Expresion&status=Active",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "type",
+							"value": "Issued",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "keyword",
+							"value": "Expresion",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "status",
+							"value": "Active",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": [],
+					"folder": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "31ab6a62-6326-476d-8db7-25ec11f727bb",
+					"name": "Obtener cliente",
+					"url": "{{SERVER}}/Client/XPh6Ksi86ivPflqhYwvgFg2",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"enabled": true
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "253bda3a-e4b4-4641-80b5-78902db8fb94",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"rawModeData": "{\n    \"Id\": \"ETzCSF263OqE054smqDKdA2\",\n    \"Address\": {\n        \"Street\": \"Av Seguridad Soc\",\n        \"ExteriorNumber\": \"123\",\n        \"InteriorNumber\": \"\",\n        \"Neighborhood\": \"Fidelio Velazquez\",\n        \"ZipCode\": \"78436\",\n        \"Locality\": \"\",\n        \"Municipality\": \"Soledad de Graciano Sánchez\",\n        \"State\": \"SAN LUIS POTOSI\",\n        \"Country\": \"MEXICO\"\n    },\n    \"Rfc\": \"ROAM861021459\",\n    \"Name\": \"Manuel Romero Alva\",\n    \"Email\": \"manuelromeroalva@gmail.com\",\n    \"CfdiUse\": \"P01\",\n    \"TaxResidence\": \"\",\n    \"NumRegIdTrib\": \"\"\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
 					"id": "39d80948-7e7e-463d-a6e5-d9d806f44cf9",
-					"name": "Uso de CFDI",
+					"name": "Uso de Cfdi",
 					"url": "{{SERVER}}/catalogs/CfdiUses?keyword=POAJ850914123",
 					"description": "Usos de que se le puede dar a la factura",
 					"data": [],
@@ -509,8 +611,50 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "4d7cbc60-89df-4dac-b033-ddcca79adc52",
+					"name": "Cfdis filtrados por Rfc",
+					"url": "{{SERVER}}/cfdi?type=Issued&status=Active&rfc=ESO1202108R2",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "type",
+							"value": "Issued",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "status",
+							"value": "Active",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "rfc",
+							"value": "ESO1202108R2",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": [],
+					"folder": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "69876b2d-c8a8-443f-99e9-3876e51dd3b6",
-					"name": "Catálogo de Formas de Pago",
+					"name": "Catálogo de formas de pago",
 					"url": "{{SERVER}}/catalogs/PaymentForms",
 					"description": "",
 					"data": null,
@@ -522,6 +666,76 @@
 					"auth": null,
 					"events": [],
 					"folder": "862df05a-50c9-4383-9a61-17aebb32aa38",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "7269d0a6-ae53-433a-b870-270416cc8ef8",
+					"name": "Enviar Cfdi por email",
+					"url": "{{SERVER}}/Cfdi?cfdiType=issued&cfdiId=7eo51BvzV-E16gBx3nnxfQ2&email=chucho@facturama.mx",
+					"description": "NOTA: El envío de Cfdi por correo, se realiza de la misma forma para API WEB y API Multiemisor\n\n(la misma url, y el mismo formato). Pero se diferencía en el cfdiType=issued   o    cfdiType=received",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "cfdiType",
+							"value": "issued",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "cfdiId",
+							"value": "7eo51BvzV-E16gBx3nnxfQ2",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "email",
+							"value": "chucho@facturama.mx",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": [],
+					"folder": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "7aea8bd5-199b-4b5f-af99-0ce6c7908848",
+					"name": "Detalle de Cfdi",
+					"url": "{{SERVER}}/Cfdi/7eo51BvzV-E16gBx3nnxfQ2?type=issued",
+					"description": "Obtiene el detalle del CFDI con el Id y tipo seleccionado",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "type",
+							"value": "issued",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": [],
+					"folder": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
@@ -578,6 +792,26 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "85bff8e6-1e9d-469f-b8cf-9e3a4c46c2db",
+					"name": "Obtener producto",
+					"url": "{{SERVER}}/Product/rTRHF583IKUdi3yw2sYwrw2",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "323fa633-1ab1-4488-b436-8eb41725c4ca",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "8e1cd04d-695d-41ec-be32-27cac0752311",
 					"name": "Lista de sucursales",
 					"url": "{{SERVER}}/api/BranchOffice",
@@ -600,7 +834,7 @@
 				{
 					"id": "915af482-0fc6-40f7-8f80-adcc785aa11b",
 					"name": "Agregrar producto o servicio",
-					"url": "{{SERVER}}/api/Product",
+					"url": "{{SERVER}}/Product",
 					"description": "Permite agregar un elemento al catálogo de productos",
 					"data": [],
 					"dataMode": "raw",
@@ -617,6 +851,39 @@
 					"auth": null,
 					"events": [],
 					"folder": "323fa633-1ab1-4488-b436-8eb41725c4ca",
+					"responses": [
+						{
+							"id": "c020dc7f-e112-4c7d-853f-9b9a08f83a91",
+							"name": "Agregrar producto o servicio",
+							"status": "",
+							"mime": "",
+							"language": "",
+							"text": "{\"Unit\":\"Servicio\",\"UnitCode\":\"E48\",\"IdentificationNumber\":\"WEB003\",\"Name\":\"Sitio Web CMS\",\"Description\":\"Desarrollo e implementación de sitio web empleando un CMS\",\"Price\":6500.0,\"CodeProdServ\":\"20102000\",\"CuentaPredial\":\"123\",\"Taxes\":{\"Taxes\":[{\"Name\":\"IVA\",\"Rate\":0.16,\"IsRetention\":false},{\"Name\":\"ISR\",\"IsRetention\":true,\"Total\":0.1},{\"Name\":\"IVA\",\"IsRetention\":true,\"Total\":0.106667}]}}",
+							"responseCode": {
+								"code": 200,
+								"name": "OK"
+							},
+							"requestObject": {
+								"url": "{{SERVER}}/api/Product",
+								"pathVariableData": [],
+								"queryParams": [],
+								"headerData": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"data": "{\r\n  \"Unit\": \"Servicio\",\r\n  \"UnitCode\": \"E48\",\r\n  \"IdentificationNumber\": \"WEB003\",\r\n  \"Name\": \"Sitio Web CMS\",\r\n  \"Description\": \"Desarrollo e implementación de sitio web empleando un CMS\",\r\n  \"Price\": 6500,\r\n  \"CodeProdServ\": \"43232408\",\r\n  \"CuentaPredial\": \"123\",\r\n  \"Taxes\": [\r\n    {\r\n      \"Name\": \"IVA\",\r\n      \"Rate\": 0.16,\r\n      \"IsRetention\": false,\r\n      \"IsFederalTax\": true\r\n    },\r\n    {\r\n      \"Name\": \"ISR\",\r\n      \"IsRetention\": true,\r\n      \"IsFederalTax\": true,\r\n      \"Total\": 0.10\r\n    },\r\n    {\r\n      \"Name\": \"IVA\",\r\n      \"IsRetention\": true,\r\n      \"IsFederalTax\": true,\r\n      \"Total\": 0.106667\r\n    }\r\n  ]\r\n}",
+								"method": "POST",
+								"dataMode": "raw"
+							},
+							"headers": [],
+							"cookies": [],
+							"request": "915af482-0fc6-40f7-8f80-adcc785aa11b",
+							"collection": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b"
+						}
+					],
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
@@ -625,8 +892,28 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "96681785-80b7-4b7d-80bf-de66ef9454e1",
+					"name": "Eliminar producto o servicio",
+					"url": "{{SERVER}}/Product/mHxwyhlSwtxCtZSaSYPvGg2",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "323fa633-1ab1-4488-b436-8eb41725c4ca",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "97584ec1-66a3-4781-8cd3-1eea12e3524b",
-					"name": "Agregar Cliente",
+					"name": "Agregar cliente",
 					"url": "{{SERVER}}/api/Client",
 					"description": "Agrega un cliente nuevo",
 					"data": [],
@@ -708,8 +995,8 @@
 				},
 				{
 					"id": "ab133a70-76f5-4f2a-a6cd-e6ca177ebdb4",
-					"name": "Emitir factura",
-					"url": "{{SERVER}}/api/2/cfdis",
+					"name": "Crear factura",
+					"url": "{{SERVER}}/2/cfdis",
 					"description": "Ceación / Emisión",
 					"data": [],
 					"dataMode": "raw",
@@ -734,8 +1021,8 @@
 				},
 				{
 					"id": "af2b4fb4-ace7-473a-b946-38f42c1d76da",
-					"name": "Descargar factura",
-					"url": "{{SERVER}}/api/Cfdi/pdf/issued/7eo51BvzV-E16gBx3nnxfQ2",
+					"name": "Descargar Cfdi",
+					"url": "{{SERVER}}/Cfdi/pdf/issued/7eo51BvzV-E16gBx3nnxfQ2",
 					"description": "Descarga una factura, permitiendo elegir entre diferentes formatos",
 					"data": null,
 					"dataMode": "params",
@@ -972,6 +1259,60 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "e9fa5051-6060-4368-9dcf-c4e3d90ba979",
+					"name": "Cancelar Cfdi",
+					"url": "{{SERVER}}/Cfdi/52Vr8DgJZELec2NnpdlJFA2?type=issued",
+					"description": "Los CFDI no se pueden eliminar, solo se cancelan",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "type",
+							"value": "issued",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": [],
+					"folder": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "edc25abe-d469-4b90-babb-2aa91d08d1d7",
+					"name": "Editar producto o servicio",
+					"url": "{{SERVER}}/Product/rTRHF583IKUdi3yw2sYwrw2",
+					"description": null,
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "323fa633-1ab1-4488-b436-8eb41725c4ca",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"rawModeData": "{\r\n  \"Unit\": \"Servicio\",\r\n  \"UnitCode\": \"E48\",\r\n  \"IdentificationNumber\": \"WEB003\",\r\n  \"Name\": \"Sitio Web CMS\",\r\n  \"Description\": \"Desarrollo de Sitio informativo, de una pagina\",\r\n  \"Price\": 6500,\r\n  \"CodeProdServ\": \"43232408\",\r\n  \"CuentaPredial\": \"123\",\r\n  \"Taxes\": [\r\n    {\r\n      \"Name\": \"IVA\",\r\n      \"Rate\": 0.16,\r\n      \"IsRetention\": false,\r\n      \"IsFederalTax\": true\r\n    }\r\n  ]\r\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
 					"id": "f15a4c3b-d98c-48dc-b2a7-08ebeb54ef35",
 					"name": "Códigos postales",
 					"url": "{{SERVER}}/catalogs/PostalCodes?keyword=7818",
@@ -1032,6 +1373,52 @@
 					"helperAttributes": null,
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
 					"rawModeData": "",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "f402f39b-fd47-47ec-9c58-1d2fcc2a000b",
+					"name": "Editar cliente",
+					"url": "{{SERVER}}/Client/SEnbkR2jrxFFUzqq9rckOQ2",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "253bda3a-e4b4-4641-80b5-78902db8fb94",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"rawModeData": "{\n        \"Id\": \"SEnbkR2jrxFFUzqq9rckOQ2\",\n        \"Address\": {\n            \"ZipCode\": \"\",\n            \"Locality\": \"\",\n            \"Country\": \"MEXICO\"\n        },\n        \"Rfc\": \"XAXX010101000\",\n        \"Name\": \"Cliente fino y selecto\",\n        \"Email\": \"cliente@fino.com\",\n        \"CfdiUse\": \"D02\"\n    }",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "f914ee5d-c905-4507-a417-8756d3ddea66",
+					"name": "Lista de productos",
+					"url": "{{SERVER}}/Product",
+					"description": "Obtiene una lista de productos",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "323fa633-1ab1-4488-b436-8eb41725c4ca",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
 					"headers": "",
 					"pathVariables": {}
 				}
@@ -5077,7 +5464,7 @@
 				},
 				{
 					"id": "4eda36eb-4312-47e3-b37e-3e22e15ca0bd",
-					"name": "Facturar",
+					"name": "Cfdis",
 					"description": "",
 					"auth": null,
 					"events": null,
@@ -5086,7 +5473,11 @@
 					"order": [
 						"5a48217e-edc6-43e3-b3d7-6d827d8b9bb1",
 						"b7c5b78b-fabb-492f-99ed-d29ae94d2b0e",
-						"692f5b88-8299-4e5e-917f-9c1bdfd5b6dc"
+						"692f5b88-8299-4e5e-917f-9c1bdfd5b6dc",
+						"284194d8-272a-48ab-b17a-1b47580a0ae9",
+						"ecdc07dc-03bf-4fba-9950-836579cbf88b",
+						"ba630d52-8568-4c00-9212-d3549d35ca64",
+						"b4a66a50-0f58-4c2a-970b-5af6a6f6eeb6"
 					],
 					"folders_order": [],
 					"collectionId": "ff36efa4-87d2-49e5-b8d2-4a91c06a8cd4",
@@ -5122,8 +5513,28 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "284194d8-272a-48ab-b17a-1b47580a0ae9",
+					"name": "Cancelar un Cfdi",
+					"url": "{{SERVER}}/api-lite/cfdis/0L864p3ksJ3MjWf3or242g2",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "4eda36eb-4312-47e3-b37e-3e22e15ca0bd",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ff36efa4-87d2-49e5-b8d2-4a91c06a8cd4",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "5a48217e-edc6-43e3-b3d7-6d827d8b9bb1",
-					"name": "Emitir factura",
+					"name": "Crear factura",
 					"url": "{{SERVER}}/api-lite/2/cfdis",
 					"description": "",
 					"data": [],
@@ -5175,8 +5586,8 @@
 				},
 				{
 					"id": "692f5b88-8299-4e5e-917f-9c1bdfd5b6dc",
-					"name": "Obtener el detalle del CFDI con el Id y tipo seleccionado",
-					"url": "{{SERVER}}/api/Cfdi/pdf/{type}/{id}",
+					"name": "Obtener detalle del Cfdi",
+					"url": "{{SERVER}}/api-lite/Cfdis/0L864p3ksJ3MjWf3or242g2",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -5235,7 +5646,7 @@
 				{
 					"id": "6b9a4b6b-d38a-472e-b28b-cd4bddf0cac6",
 					"name": "Eliminar CSD",
-					"url": "{{SERVER}}/api-lite/csds/ALO110913N98",
+					"url": "{{SERVER}}/api-lite/csds/AAA010101AAA",
 					"description": "Elimina el CSD asociado con determinado RFC",
 					"data": null,
 					"dataMode": "params",
@@ -5253,10 +5664,52 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "b4a66a50-0f58-4c2a-970b-5af6a6f6eeb6",
+					"name": "Enviar Cfdi por email",
+					"url": "{{SERVER}}/Cfdi?cfdiType=issuedLite&cfdiId=2vXiGawRhzJhPTxiDsnBug2&email=chucho@facturama.mx",
+					"description": "NOTA: El envío de Cfdi por correo, se realiza de la misma forma para API WEB y API Multiemisor\n\n(la misma url, y el mismo formato). Pero se diferencía en el cfdiType=issuedLite",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "cfdiType",
+							"value": "issuedLite",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "cfdiId",
+							"value": "2vXiGawRhzJhPTxiDsnBug2",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "email",
+							"value": "chucho@facturama.mx",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": [],
+					"folder": "4eda36eb-4312-47e3-b37e-3e22e15ca0bd",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ff36efa4-87d2-49e5-b8d2-4a91c06a8cd4",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "b7c5b78b-fabb-492f-99ed-d29ae94d2b0e",
-					"name": "Descargar factura",
-					"url": "{{SERVER}}/api/Cfdi/pdf/issued/",
-					"description": "Descarga una factura, permitiendo elegir entre diferentes formatos",
+					"name": "Descargar Cfdi",
+					"url": "{{SERVER}}/api/Cfdi/pdf/issuedLite/6O7rMXJW70HG7f5qWhWNOw2",
+					"description": "Descarga una Cfdi, permitiendo elegir entre diferentes formatos",
 					"data": null,
 					"dataMode": "params",
 					"headerData": [],
@@ -5296,6 +5749,34 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "ba630d52-8568-4c00-9212-d3549d35ca64",
+					"name": "Obtener Cfdis filtrados",
+					"url": "{{SERVER}}/api-lite/cfdis?keyword=radial",
+					"description": "Obtiene los últimos 50 Cfdis que corresponden a los filtros aplicables",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "keyword",
+							"value": "radial",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": [],
+					"folder": "4eda36eb-4312-47e3-b37e-3e22e15ca0bd",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ff36efa4-87d2-49e5-b8d2-4a91c06a8cd4",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "d20ddd02-556c-4dc6-8448-e1cfe7aaa62d",
 					"name": "Obtener los CSD cargados",
 					"url": "{{SERVER}}/api-lite/csds",
@@ -5309,6 +5790,26 @@
 					"auth": null,
 					"events": [],
 					"folder": "ec834503-d7f1-4f4e-a310-7069458e22a5",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "ff36efa4-87d2-49e5-b8d2-4a91c06a8cd4",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "ecdc07dc-03bf-4fba-9950-836579cbf88b",
+					"name": "Obtener acuse de cancelación",
+					"url": "{{SERVER}}/acuse/pdf/issuedLite/0L864p3ksJ3MjWf3or242g2",
+					"description": "",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "4eda36eb-4312-47e3-b37e-3e22e15ca0bd",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "ff36efa4-87d2-49e5-b8d2-4a91c06a8cd4",
