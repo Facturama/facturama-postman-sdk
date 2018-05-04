@@ -67,7 +67,8 @@
 						"7c5f8644-0f5c-4ca9-a0f5-4d1962270ab6",
 						"217cb73b-b03e-47cb-bc50-75335055ea91",
 						"69876b2d-c8a8-443f-99e9-3876e51dd3b6",
-						"108bbdcb-4c69-4ab4-9216-03160c1423cb"
+						"108bbdcb-4c69-4ab4-9216-03160c1423cb",
+						"d76665f0-6125-40d2-bec3-f95e4a23cac7"
 					],
 					"folders_order": [],
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
@@ -327,7 +328,7 @@
 				{
 					"id": "04df173f-9f0b-458a-afb0-6ac1134a9f1b",
 					"name": "Catálogo de unidades",
-					"url": "{{SERVER}}/Catalogs/Units?keyword=E48",
+					"url": "{{SERVER}}/Catalogs/Units?keyword=18",
 					"description": "Catálogo de unidades del SAT",
 					"data": null,
 					"dataMode": "params",
@@ -337,7 +338,7 @@
 					"queryParams": [
 						{
 							"key": "keyword",
-							"value": "E48",
+							"value": "18",
 							"equals": true,
 							"description": "",
 							"enabled": true
@@ -544,7 +545,7 @@
 				},
 				{
 					"id": "39d80948-7e7e-463d-a6e5-d9d806f44cf9",
-					"name": "Uso de Cfdi",
+					"name": "Catálogo de Usos de Cfdi",
 					"url": "{{SERVER}}/catalogs/CfdiUses?keyword=POAJ850914123",
 					"description": "Usos de que se le puede dar a la factura",
 					"data": [],
@@ -593,7 +594,7 @@
 				{
 					"id": "47ec1283-cb1e-4527-a71f-6a7aa6f9abe5",
 					"name": "Lista de clientes",
-					"url": "{{SERVER}}/api/Client",
+					"url": "{{SERVER}}/Client",
 					"description": "",
 					"data": null,
 					"dataMode": "params",
@@ -745,7 +746,7 @@
 				{
 					"id": "7bc794e8-18bf-42c1-a791-b031b1276960",
 					"name": "Códigos de productos o servicios",
-					"url": "{{SERVER}}/catalogs/ProductsOrServices?keyword=gatos",
+					"url": "{{SERVER}}/catalogs/ProductsOrServices?keyword=desarrollo",
 					"description": "Obtener los códigos de productos y servicios",
 					"data": [],
 					"dataMode": "raw",
@@ -755,7 +756,7 @@
 					"queryParams": [
 						{
 							"key": "keyword",
-							"value": "gatos",
+							"value": "desarrollo",
 							"equals": true,
 							"description": "",
 							"enabled": true
@@ -914,7 +915,7 @@
 				{
 					"id": "97584ec1-66a3-4781-8cd3-1eea12e3524b",
 					"name": "Agregar cliente",
-					"url": "{{SERVER}}/api/Client",
+					"url": "{{SERVER}}/Client",
 					"description": "Agrega un cliente nuevo",
 					"data": [],
 					"dataMode": "raw",
@@ -1252,6 +1253,26 @@
 					],
 					"preRequestScript": null,
 					"tests": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "d76665f0-6125-40d2-bec3-f95e4a23cac7",
+					"name": "Catálogo de régimenes fiscales",
+					"url": "{{SERVER}}/Catalogs/FiscalRegimens",
+					"description": null,
+					"data": [],
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "862df05a-50c9-4383-9a61-17aebb32aa38",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
@@ -5847,7 +5868,7 @@
 				{
 					"enabled": true,
 					"key": "SERVER",
-					"value": "https://www.api.facturama.com.mx",
+					"value": "https://api.facturama.mx",
 					"type": "text"
 				}
 			]
@@ -5859,7 +5880,7 @@
 				{
 					"enabled": true,
 					"key": "SERVER",
-					"value": "http://apisandbox.facturama.com.mx",
+					"value": "https://apisandbox.facturama.mx",
 					"type": "text"
 				}
 			]
