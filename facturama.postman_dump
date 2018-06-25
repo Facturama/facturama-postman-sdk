@@ -9,12 +9,12 @@
 				"type": "basic",
 				"basic": [
 					{
-						"key": "password",
-						"value": "pruebas2011"
-					},
-					{
 						"key": "username",
 						"value": "pruebas"
+					},
+					{
+						"key": "password",
+						"value": "pruebas2011"
 					}
 				]
 			},
@@ -68,7 +68,8 @@
 						"217cb73b-b03e-47cb-bc50-75335055ea91",
 						"69876b2d-c8a8-443f-99e9-3876e51dd3b6",
 						"108bbdcb-4c69-4ab4-9216-03160c1423cb",
-						"d76665f0-6125-40d2-bec3-f95e4a23cac7"
+						"d76665f0-6125-40d2-bec3-f95e4a23cac7",
+						"030d6584-2867-4b93-a766-e81b1d4f93d7"
 					],
 					"folders_order": [],
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
@@ -159,7 +160,9 @@
 					"events": null,
 					"collection": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
 					"folder": null,
-					"order": [],
+					"order": [
+						"9a100f8d-c90a-4990-b2e7-862aa18c3cb7"
+					],
 					"folders_order": [
 						"7895de1c-94fb-4fe3-b2c1-040ac8a38402",
 						"0f4be531-8900-497a-8713-1cb10ad234dc"
@@ -319,6 +322,26 @@
 							"collection": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b"
 						}
 					],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "030d6584-2867-4b93-a766-e81b1d4f93d7",
+					"name": "Catálogo de tipos de Cfdi",
+					"url": "{{SERVER}}/Catalogs/CfdiTypes",
+					"description": "Muestra los tipos de factura que se pueden crear con la cuenta actual",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "862df05a-50c9-4383-9a61-17aebb32aa38",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
@@ -888,7 +911,7 @@
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
-					"rawModeData": "{\r\n  \"Unit\": \"Servicio\",\r\n  \"UnitCode\": \"E48\",\r\n  \"IdentificationNumber\": \"WEB003\",\r\n  \"Name\": \"Sitio Web CMS\",\r\n  \"Description\": \"Desarrollo e implementación de sitio web empleando un CMS\",\r\n  \"Price\": 6500,\r\n  \"CodeProdServ\": \"43232408\",\r\n  \"CuentaPredial\": \"123\",\r\n  \"Taxes\": [\r\n    {\r\n      \"Name\": \"IVA\",\r\n      \"Rate\": 0.16,\r\n      \"IsRetention\": false,\r\n      \"IsFederalTax\": true\r\n    },\r\n    {\r\n      \"Name\": \"ISR\",\r\n      \"IsRetention\": true,\r\n      \"IsFederalTax\": true,\r\n      \"Total\": 0.10\r\n    },\r\n    {\r\n      \"Name\": \"IVA\",\r\n      \"IsRetention\": true,\r\n      \"IsFederalTax\": true,\r\n      \"Total\": 0.106667\r\n    }\r\n  ]\r\n}",
+					"rawModeData": "{\r\n  \"Unit\": \"Servicio\",\r\n  \"UnitCode\": \"E48\",\r\n  \"IdentificationNumber\": \"WEB003\",\r\n  \"Name\": \"Sitio Web CMS\",\r\n  \"Description\": \"Creacion de base de datos\",\r\n  \"Price\": 6500,\r\n  \"CodeProdServ\": \"43232408\",\r\n  \"CuentaPredial\": \"123\",\r\n  \"Taxes\": [\r\n    {\r\n      \"Name\": \"IVA\",\r\n      \"Rate\": 0.16,\r\n      \"IsRetention\": false,\r\n      \"IsFederalTax\": true\r\n    },\r\n    {\r\n      \"Name\": \"ISR\",\r\n      \"IsRetention\": true,\r\n      \"IsFederalTax\": true,\r\n      \"Total\": 0.10\r\n    },\r\n    {\r\n      \"Name\": \"IVA\",\r\n      \"IsRetention\": true,\r\n      \"IsFederalTax\": true,\r\n      \"Total\": 0.106667\r\n    }\r\n  ]\r\n}",
 					"headers": "Content-Type: application/json\n",
 					"pathVariables": {}
 				},
@@ -975,6 +998,26 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "9a100f8d-c90a-4990-b2e7-862aa18c3cb7",
+					"name": "Suscripción ",
+					"url": "{{SERVER}}/SuscriptionPlan",
+					"description": "Obtiene la suscripción vigente",
+					"data": null,
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "73071863-a793-4322-bf36-e14a6fa7e924",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
 					"id": "a04f9d54-e125-445e-b201-5446eaceba29",
 					"name": "Catalogo de país",
 					"url": "{{SERVER}}/catalogs/Countries",
@@ -1011,12 +1054,12 @@
 					"pathVariableData": [],
 					"queryParams": [],
 					"auth": null,
-					"events": [],
+					"events": null,
 					"folder": "7df55d22-d89f-4e22-b4f4-5f709bdda0bc",
 					"currentHelper": null,
 					"helperAttributes": null,
 					"collectionId": "09a904be-1407-4cdf-b4ef-dcf13eb43d7b",
-					"rawModeData": "{\r\n  \"Serie\": \"R\",\r\n  \"Currency\": \"MXN\",\r\n  \"ExpeditionPlace\": \"78116\",\r\n  \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n  \"Folio\": \"100\",\r\n  \"CfdiType\": \"I\",\r\n  \"PaymentForm\": \"03\",\r\n  \"PaymentMethod\": \"PUE\",\r\n  \"Receiver\": {\r\n    \"Rfc\": \"ESO1202108R2\",\r\n    \"Name\": \"EXPRESION EN SOFTWARE SAPI DE CV\",\r\n    \"CfdiUse\": \"P01\"\r\n  },\r\n  \"Items\": [\r\n    {\r\n      \"ProductCode\": \"10101504\",\r\n      \"IdentificationNumber\": \"EDL\",\r\n      \"Description\": \"Estudios de laboratorio\",\r\n      \"Unit\": \"NO APLICA\",\r\n      \"UnitCode\": \"MTS\",\r\n      \"UnitPrice\": 50,\r\n      \"Quantity\": 2.0,\r\n      \"Subtotal\": 100,\r\n      \"Taxes\": [\r\n        {\r\n          \"Total\": 16,\r\n          \"Name\": \"IVA\",\r\n          \"Base\": 100,\r\n          \"Rate\": 0.16,\r\n          \"IsRetention\": false\r\n        }\r\n      ],\r\n      \"Total\": 116\r\n    },\r\n    {\r\n      \"ProductCode\": \"10101504\",\r\n      \"IdentificationNumber\": \"001\",\r\n      \"Description\": \"SERVICIO DE COLOCACION\",\r\n      \"Unit\": \"NO APLICA\",\r\n      \"UnitCode\": \"E49\",\r\n      \"UnitPrice\": 100.0,\r\n      \"Quantity\": 15.0,\r\n      \"Subtotal\": 1500.0,\r\n      \"Discount\": 0.0,\r\n      \"Taxes\": [\r\n        {\r\n          \"Total\": 240.0,\r\n          \"Name\": \"IVA\",\r\n          \"Base\": 1500.0,\r\n          \"Rate\": 0.16,\r\n          \"IsRetention\": false\r\n        }\r\n      ],\r\n      \"Total\": 1740.0\r\n    }\r\n  ]\r\n}",
+					"rawModeData": "{\r\n  \"Currency\": \"MXN\",\r\n  \"ExpeditionPlace\": \"78116\",\r\n  \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n  \"Folio\": \"100\",\r\n  \"CfdiType\": \"I\",\r\n  \"PaymentForm\": \"03\",\r\n  \"PaymentMethod\": \"PUE\",\r\n  \"Receiver\": {\r\n    \"Rfc\": \"ESO1202108R2\",\r\n    \"Name\": \"EXPRESION EN SOFTWARE SAPI DE CV\",\r\n    \"CfdiUse\": \"P01\"\r\n  },\r\n  \"Items\": [\r\n    {\r\n      \"ProductCode\": \"10101504\",\r\n      \"IdentificationNumber\": \"EDL\",\r\n      \"Description\": \"Estudios de laboratorio\",\r\n      \"Unit\": \"NO APLICA\",\r\n      \"UnitCode\": \"MTS\",\r\n      \"UnitPrice\": 50,\r\n      \"Quantity\": 2.0,\r\n      \"Subtotal\": 100,\r\n      \"Taxes\": [\r\n        {\r\n          \"Total\": 16,\r\n          \"Name\": \"IVA\",\r\n          \"Base\": 100,\r\n          \"Rate\": 0.16,\r\n          \"IsRetention\": false\r\n        }\r\n      ],\r\n      \"Total\": 116\r\n    },\r\n    {\r\n      \"ProductCode\": \"10101504\",\r\n      \"IdentificationNumber\": \"001\",\r\n      \"Description\": \"SERVICIO DE COLOCACION\",\r\n      \"Unit\": \"NO APLICA\",\r\n      \"UnitCode\": \"E49\",\r\n      \"UnitPrice\": 100.0,\r\n      \"Quantity\": 15.0,\r\n      \"Subtotal\": 1500.0,\r\n      \"Discount\": 0.0,\r\n      \"Taxes\": [\r\n        {\r\n          \"Total\": 240.0,\r\n          \"Name\": \"IVA\",\r\n          \"Base\": 1500.0,\r\n          \"Rate\": 0.16,\r\n          \"IsRetention\": false\r\n        }\r\n      ],\r\n      \"Total\": 1740.0\r\n    }\r\n  ]\r\n}",
 					"headers": "Content-Type: application/json\n",
 					"pathVariables": {}
 				},
