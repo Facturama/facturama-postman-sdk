@@ -1,0 +1,932 @@
+{
+	"info": {
+		"_postman_id": "3b256f4a-3c1b-44e3-ba94-fed4e3f4d70b",
+		"name": "Facturama API Multiemisor",
+		"description": "API que permiete trabajar con multiples emidores, cargando los certificdados de cada uno de ellos.\nMejora la concurrencia.\n\nPero:\nNo tiene opcion de acceder al la interfaz web.\nNi tampoco almacena catálogos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18439997"
+	},
+	"item": [
+		{
+			"name": "Cfdis",
+			"item": [
+				{
+					"name": "Retenciones",
+					"item": [
+						{
+							"name": "Descargar retenciones",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "{{UserName}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{SERVER}}/Retenciones/9_WuOO9h1O6n_QlE0881ow2/pdf",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"Retenciones",
+										"9_WuOO9h1O6n_QlE0881ow2",
+										"pdf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filtrar Retenciones",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "{{UserName}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{SERVER}}/Retenciones/T9jTRQPcxNhZySr3qEelcw2",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"Retenciones",
+										"T9jTRQPcxNhZySr3qEelcw2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retenciones v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "{{UserName}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"FolioInt\": \"0001\",\r\n    \"FechaExp\": \"2023-05-07T08:08:01-06:00\",\r\n    \"CveRetenc\": \"16\",\r\n    \"Emisor\": {\r\n        \"RFCEmisor\": \"EKU9003173C9\",\r\n        \"NomDenRazSocE\": \"ESCUELA KEMPER URGATE\",\r\n        \"RegimenFiscalE\": \"601\"\r\n    },\r\n    \"Receptor\": {\r\n        \"Nacionalidad\": \"Nacional\",\r\n        \"Nacional\": {\r\n            \"RFCRecep\": \"CACX7605101P8\",\r\n            \"NomDenRazSocR\": \"XOCHILT CASAS CHAVEZ\",\r\n            \"DomicilioFiscalR\": \"10740\"\r\n        }\r\n    },\r\n    \"Periodo\": {\r\n        \"MesIni\": \"08\",\r\n        \"MesFin\": \"08\",\r\n        \"Ejerc\": \"2022\"\r\n    },\r\n    \"Totales\": {\r\n        \"montoTotOperacion\": \"1681.06\",\r\n        \"montoTotGrav\": \"1681.06\",\r\n        \"montoTotExent\": \"0.00\",\r\n        \"montoTotRet\": \"151.2906\",\r\n        \"ImpRetenidos\": [\r\n            {\r\n                \"BaseRet\": \"1681.06\",\r\n                \"Impuesto\": \"01\",\r\n                \"MontoRet\": \"16.8106\",\r\n                \"TipoPagoRet\": \"Pago definitivo\"\r\n            },\r\n            {\r\n                \"BaseRet\": \"268.96\",\r\n                \"Impuesto\": \"02\",\r\n                \"MontoRet\": \"134.48\",\r\n                \"TipoPagoRet\": \"Pago definitivo\"\r\n            }\r\n        ]\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SERVER}}/retenciones",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"retenciones"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "{{UserName}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"FolioInt\": \"0001\",\r\n    \"FechaExp\": \"2023-05-07T08:08:01\",\r\n    \"CveRetenc\": \"01\",\r\n    \"LugarExpRetenc\": \"78000\",\r\n    \"Emisor\": {\r\n        \"RFCEmisor\": \"EKU9003173C9\",\r\n        \"NomDenRazSocE\": \"ESCUELA KEMPER URGATE\",\r\n        \"RegimenFiscalE\": \"601\"\r\n    },\r\n    \"Receptor\": {\r\n        \"Nacionalidad\": \"Nacional\",\r\n        \"Nacional\": {\r\n            \"RFCRecep\": \"CACX7605101P8\",\r\n            \"NomDenRazSocR\": \"XOCHILT CASAS CHAVEZ\",\r\n            \"DomicilioFiscalR\": \"10740\"\r\n        }\r\n    },\r\n    \"Periodo\": {\r\n        \"MesIni\": \"01\",\r\n        \"MesFin\": \"01\",\r\n        \"Ejerc\": \"2023\"\r\n    },\r\n    \"Totales\": {\r\n        \"montoTotOperacion\": \"1681.06\",\r\n        \"montoTotGrav\": \"1681.06\",\r\n        \"montoTotExent\": \"0.00\",\r\n        \"montoTotRet\": \"151.29\",\r\n        \"ImpRetenidos\": [\r\n            {\r\n                \"BaseRet\": \"1681.06\",\r\n                \"Impuesto\": \"01\",\r\n                \"MontoRet\": \"16.81\",\r\n                \"TipoPagoRet\": \"04\"\r\n            },\r\n            {\r\n                \"BaseRet\": \"268.96\",\r\n                \"Impuesto\": \"02\",\r\n                \"MontoRet\": \"134.48\",\r\n                \"TipoPagoRet\": \"01\"\r\n            }\r\n        ]\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SERVER}}/2/retenciones",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"2",
+										"retenciones"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Enviar Cfdi por email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{SERVER}}/Cfdi?cfdiType=issuedLite&cfdiId=JfDtQHaFpSy8euhsK0tXqw2&email=receptor@ejemplo.com&subject=&comments=&issuerEmail=correo_emisor@ejemplo.com",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"Cfdi"
+							],
+							"query": [
+								{
+									"key": "cfdiType",
+									"value": "issuedLite"
+								},
+								{
+									"key": "cfdiId",
+									"value": "JfDtQHaFpSy8euhsK0tXqw2"
+								},
+								{
+									"key": "email",
+									"value": "receptor@ejemplo.com"
+								},
+								{
+									"key": "subject",
+									"value": ""
+								},
+								{
+									"key": "comments",
+									"value": ""
+								},
+								{
+									"key": "issuerEmail",
+									"value": "correo_emisor@ejemplo.com"
+								}
+							]
+						},
+						"description": "NOTA: El envío de Cfdi por correo, se realiza de la misma forma para API WEB y API Multiemisor\n\n(la misma url, y el mismo formato). Pero se diferencía en el cfdiType=issuedLite"
+					},
+					"response": []
+				},
+				{
+					"name": "Descargar Cfdi",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/api/Cfdi/pdf/issuedLite/uju5OOIWMzm6G9tDPX9lXA2",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"Cfdi",
+								"pdf",
+								"issuedLite",
+								"uju5OOIWMzm6G9tDPX9lXA2"
+							]
+						},
+						"description": "Descarga una Cfdi, permitiendo elegir entre diferentes formatos"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener detalle del Cfdi",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/api-lite/Cfdis/uju5OOIWMzm6G9tDPX9lXA2",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"Cfdis",
+								"uju5OOIWMzm6G9tDPX9lXA2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Obtener el detalle del CFDI con el Id y tipo seleccionado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "formt",
+										"value": "pdf"
+									}
+								],
+								"url": {
+									"raw": "{{SERVER}}/api/Cfdi/:format/{type}/{id}",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"Cfdi",
+										":format",
+										"{type}",
+										"{id}"
+									],
+									"variable": [
+										{
+											"key": "format",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Cancelar un Cfdi",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/cfdis/0L864p3ksJ3MjWf3or242g2",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"cfdis",
+								"0L864p3ksJ3MjWf3or242g2"
+							],
+							"query": [
+								{
+									"key": "motive",
+									"value": "02",
+									"disabled": true
+								},
+								{
+									"key": "uuidReplacement",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener acuse de cancelación",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/acuse/pdf/issuedLite/0L864p3ksJ3MjWf3or242g2",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"acuse",
+								"pdf",
+								"issuedLite",
+								"0L864p3ksJ3MjWf3or242g2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cfdis filtrados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/api-lite/cfdis?keyword=radial",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"cfdis"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "radial"
+								}
+							]
+						},
+						"description": "Obtiene los últimos 50 Cfdis que corresponden a los filtros aplicables"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cfdis filtrados Completo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/cfdi?type=issuedLite&folioStart=-1&folioEnd=-1&rfc=&dateStart=&dateEnd=&status=all&OrderNumber=&taxEntityName=&idBranch=&serie=&id=&invoiceType=&paymentMethod=&rfcIssuer=&page=0",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"cfdi"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "issuedLite"
+								},
+								{
+									"key": "folioStart",
+									"value": "-1"
+								},
+								{
+									"key": "folioEnd",
+									"value": "-1"
+								},
+								{
+									"key": "rfc",
+									"value": ""
+								},
+								{
+									"key": "dateStart",
+									"value": ""
+								},
+								{
+									"key": "dateEnd",
+									"value": ""
+								},
+								{
+									"key": "status",
+									"value": "all"
+								},
+								{
+									"key": "OrderNumber",
+									"value": ""
+								},
+								{
+									"key": "taxEntityName",
+									"value": ""
+								},
+								{
+									"key": "idBranch",
+									"value": ""
+								},
+								{
+									"key": "serie",
+									"value": ""
+								},
+								{
+									"key": "id",
+									"value": ""
+								},
+								{
+									"key": "invoiceType",
+									"value": ""
+								},
+								{
+									"key": "paymentMethod",
+									"value": ""
+								},
+								{
+									"key": "rfcIssuer",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						},
+						"description": "Obtiene los últimos 50 Cfdis que corresponden a los filtros aplicables"
+					},
+					"response": []
+				},
+				{
+					"name": "CFDI 4.0 Ingreso",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status CFDI",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/cfdi/status/?uuid=27568D31-7E57-442F-BA77-798CBF30BD7D&issuerRfc=CACX7605101P8&receiverRfc=FUNK671228PH6&total=11000.00",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"cfdi",
+								"status",
+								""
+							],
+							"query": [
+								{
+									"key": "uuid",
+									"value": "27568D31-7E57-442F-BA77-798CBF30BD7D"
+								},
+								{
+									"key": "issuerRfc",
+									"value": "CACX7605101P8"
+								},
+								{
+									"key": "receiverRfc",
+									"value": "FUNK671228PH6"
+								},
+								{
+									"key": "total",
+									"value": "11000.00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar con Motivo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api-lite/cfdis/Ar3WalEzVRz4LZ5oWPfXmw2?motive=03",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"cfdis",
+								"Ar3WalEzVRz4LZ5oWPfXmw2"
+							],
+							"query": [
+								{
+									"key": "motive",
+									"value": "03"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Certificados",
+			"item": [
+				{
+					"name": "Obtener CSD a partir del RFC",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/api-lite/csds/EKU9003173C9",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"csds",
+								"EKU9003173C9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar CSD",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pruebas2022",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sdkpruebas",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Rfc\": \"EKU9003173C9\",\n        \"Certificate\": \"MIIFuzCCA6OgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDI0MzQwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNjE3MTk0NDE0WhcNMjMwNjE3MTk0NDE0WjCB4jEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gWElRQjg5MTExNlFFNDEeMBwGA1UEBRMVIC8gWElRQjg5MTExNk1HUk1aUjA1MR4wHAYDVQQLExVFc2N1ZWxhIEtlbXBlciBVcmdhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCN0peKpgfOL75iYRv1fqq+oVYsLPVUR/GibYmGKc9InHFy5lYF6OTYjnIIvmkOdRobbGlCUxORX/tLsl8Ya9gm6Yo7hHnODRBIDup3GISFzB/96R9K/MzYQOcscMIoBDARaycnLvy7FlMvO7/rlVnsSARxZRO8Kz8Zkksj2zpeYpjZIya/369+oGqQk1cTRkHo59JvJ4Tfbk/3iIyf4H/Ini9nBe9cYWo0MnKob7DDt/vsdi5tA8mMtA953LapNyCZIDCRQQlUGNgDqY9/8F5mUvVgkcczsIgGdvf9vMQPSf3jjCiKj7j6ucxl1+FwJWmbvgNmiaUR/0q4m2rm78lFAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBCwUAA4ICAQBcpj1TjT4jiinIujIdAlFzE6kRwYJCnDG08zSp4kSnShjxADGEXH2chehKMV0FY7c4njA5eDGdA/G2OCTPvF5rpeCZP5Dw504RZkYDl2suRz+wa1sNBVpbnBJEK0fQcN3IftBwsgNFdFhUtCyw3lus1SSJbPxjLHS6FcZZ51YSeIfcNXOAuTqdimusaXq15GrSrCOkM6n2jfj2sMJYM2HXaXJ6rGTEgYmhYdwxWtil6RfZB+fGQ/H9I9WLnl4KTZUS6C9+NLHh4FPDhSk19fpS2S/56aqgFoGAkXAYt9Fy5ECaPcULIfJ1DEbsXKyRdCv3JY89+0MNkOdaDnsemS2o5Gl08zI4iYtt3L40gAZ60NPh31kVLnYNsmvfNxYyKp+AeJtDHyW9w7ftM0Hoi+BuRmcAQSKFV3pk8j51la+jrRBrAUv8blbRcQ5BiZUwJzHFEKIwTsRGoRyEx96sNnB03n6GTwjIGz92SmLdNl95r9rkvp+2m4S6q1lPuXaFg7DGBrXWC8iyqeWE2iobdwIIuXPTMVqQb12m1dAkJVRO5NdHnP/MpqOvOgLqoZBNHGyBg4Gqm4sCJHCxA1c8Elfa2RQTCk0tAzllL4vOnI1GHkGJn65xokGsaU4B4D36xh7eWrfj4/pgWHmtoDAYa8wzSwo2GVCZOs+mtEgOQB91/g==\",\n        \"PrivateKey\": \"MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIAgEAAoIBAQACAggAMBQGCCqGSIb3DQMHBAgwggS8AgEAMASCBMh4EHl7aNSCaMDA1VlRoXCZ5UUmqErAbucRFLOMmsAaFNkyWR0dXIAh0CMjE6NpQIMZhQ0HH/4tHgmwh4kCawGjIwERoG6/IH3mCt7u19J5+m6gUEGOJdEMXj976E5lKCd/EG6t6lCq66GE3rgux/nFmeQZvsjLlzPyhe2j+X81LrGudITTjDdgLI0EdbdV9CUJwWbibzrVxjuAVShRh07XPL/DiEw3Wk2+kdy4cfWmMvh0U55p0RKZopNkWuVVSvr3ai7ZNCwHZWDVqkUDpwDDGdyt0kYQ7qoKanIxv/A9wv6ekq0LQ/yLlOcelkxQeb8Glu4RXe+krRvrASw1eBAQ3mvNKpngwF8vtlyoil41PjHUOKALMJtNpywckRRYOk4703ylWIzTfdBlrZ6VmDBjdC5723G1HAx3R/x+o+08++RNiFaN06Ly5QbZZvjnealDfSKz1VKRHWeXggaW87rl4n0SOOWnvabKs4ZWRXTS0dhWK+KD/yYYQypTslDSXQrmyMkpc1Zcb4p9RTjodXxGCWdsR5i5+Ro/RiJvxWwwaO3YW6eaSavV0ROqANQ+A+GizMlxsVjl6G5Ooh6ORdA7jTNWmK44Icgyz6QFNh+J3NibxVK2GZxsQRi+N3HXeKYtq5SDXARA0BsaJQzYfDotA9LFgmFKg9jVhtcc1V3rtpaJ5sab8tdBTPPyN/XT8fA0GxlIX+hjLd3E9wB7qzNR6PZ84UKDxhCGWrLuIoSzuCbr+TD9UCJprsfTu8kr8Pur4rrxm7Zu1MsJRR9U5Ut+O9FZfw4SqGykyTGGh0v1gDG8esKpTW5MKNk9dRwDNHEmIF6tE6NeXDlzovf8VW6z9JA6AVUkgiFjDvLUY5MgyTqPB9RJNMSAZBzrkZgXyHlmFz2rvPqQGFbAtukjeRNS+nkVayLqfQnqpgthBvsgDUgFn03z0U2Svb094Q5XHMeQ4KM/nMWTEUC+8cybYhwVklJU7FBl9nzs66wkMZpViIrVWwSB2k9R1r/ZQcmeL+LR+WwgCtRs4It1rNVkxXwYHjsFM2Ce46TWhbVMF/h7Ap4lOTS15EHC8RvIBBcR2w1iJ+3pXiMeihArTELVnQsS31X3kxbBp3dGvLvW7PxDlwwdUQOXnMoimUCI/h0uPdSRULPAQHgSp9+TwqI0Uswb7cEiXnN8PySN5Tk109CYJjKqCxtuXu+oOeQV2I/0knQLd2zol+yIzNLj5a/HvyN+kOhIGi6TrFThuiVbbtnTtRM1CzKtFGuw5lYrwskkkvenoSLNY0N85QCU8ugjc3Bw4JZ9jNrDUaJ1Vb5/+1GQx/q/Dbxnl+FK6wMLjXy5JdFDeQyjBEBqndQxrs9cM5xBnl6AYs2Xymydafm2qK0cEDzwOPMpVcKU8sXS/AHvtgsn+rjMzW0wrQblWE0Ht/74GgfCj4diCDtzxQ0ggi6yJD+yhLZtVVqmKS3Gwnj9RxPLNfpgzPP01eYyBBi/W0RWTzcTb8iMxWX52MTU0oX9//4I7CAPXn0ZhpWAAIvUmkfjwfEModH7iwwaNtZFlT2rlzeshbP++UCEtqbwvveDRhmr5sMYkl+duEOca5156fcRy4tQ8Y3moNcKFKzHGMenShEIHz+W5KE=\",\n        \"PrivateKeyPassword\":\"12345678a\"\n    }\n"
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/csds",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"csds"
+							]
+						},
+						"description": "Carga un nuevo CSD"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener los CSD cargados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/api-lite/csds",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"csds"
+							]
+						},
+						"description": "Obtiene todos los certificados relacionados con el usuario logueado"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar CSD",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Rfc\": \"EKU9003173C9\",\n        \"Certificate\": \"MIIFuzCCA6OgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDI0MzQwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNjE3MTk0NDE0WhcNMjMwNjE3MTk0NDE0WjCB4jEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gWElRQjg5MTExNlFFNDEeMBwGA1UEBRMVIC8gWElRQjg5MTExNk1HUk1aUjA1MR4wHAYDVQQLExVFc2N1ZWxhIEtlbXBlciBVcmdhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCN0peKpgfOL75iYRv1fqq+oVYsLPVUR/GibYmGKc9InHFy5lYF6OTYjnIIvmkOdRobbGlCUxORX/tLsl8Ya9gm6Yo7hHnODRBIDup3GISFzB/96R9K/MzYQOcscMIoBDARaycnLvy7FlMvO7/rlVnsSARxZRO8Kz8Zkksj2zpeYpjZIya/369+oGqQk1cTRkHo59JvJ4Tfbk/3iIyf4H/Ini9nBe9cYWo0MnKob7DDt/vsdi5tA8mMtA953LapNyCZIDCRQQlUGNgDqY9/8F5mUvVgkcczsIgGdvf9vMQPSf3jjCiKj7j6ucxl1+FwJWmbvgNmiaUR/0q4m2rm78lFAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBCwUAA4ICAQBcpj1TjT4jiinIujIdAlFzE6kRwYJCnDG08zSp4kSnShjxADGEXH2chehKMV0FY7c4njA5eDGdA/G2OCTPvF5rpeCZP5Dw504RZkYDl2suRz+wa1sNBVpbnBJEK0fQcN3IftBwsgNFdFhUtCyw3lus1SSJbPxjLHS6FcZZ51YSeIfcNXOAuTqdimusaXq15GrSrCOkM6n2jfj2sMJYM2HXaXJ6rGTEgYmhYdwxWtil6RfZB+fGQ/H9I9WLnl4KTZUS6C9+NLHh4FPDhSk19fpS2S/56aqgFoGAkXAYt9Fy5ECaPcULIfJ1DEbsXKyRdCv3JY89+0MNkOdaDnsemS2o5Gl08zI4iYtt3L40gAZ60NPh31kVLnYNsmvfNxYyKp+AeJtDHyW9w7ftM0Hoi+BuRmcAQSKFV3pk8j51la+jrRBrAUv8blbRcQ5BiZUwJzHFEKIwTsRGoRyEx96sNnB03n6GTwjIGz92SmLdNl95r9rkvp+2m4S6q1lPuXaFg7DGBrXWC8iyqeWE2iobdwIIuXPTMVqQb12m1dAkJVRO5NdHnP/MpqOvOgLqoZBNHGyBg4Gqm4sCJHCxA1c8Elfa2RQTCk0tAzllL4vOnI1GHkGJn65xokGsaU4B4D36xh7eWrfj4/pgWHmtoDAYa8wzSwo2GVCZOs+mtEgOQB91/g==\",\n        \"PrivateKey\": \"MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIAgEAAoIBAQACAggAMBQGCCqGSIb3DQMHBAgwggS8AgEAMASCBMh4EHl7aNSCaMDA1VlRoXCZ5UUmqErAbucRFLOMmsAaFNkyWR0dXIAh0CMjE6NpQIMZhQ0HH/4tHgmwh4kCawGjIwERoG6/IH3mCt7u19J5+m6gUEGOJdEMXj976E5lKCd/EG6t6lCq66GE3rgux/nFmeQZvsjLlzPyhe2j+X81LrGudITTjDdgLI0EdbdV9CUJwWbibzrVxjuAVShRh07XPL/DiEw3Wk2+kdy4cfWmMvh0U55p0RKZopNkWuVVSvr3ai7ZNCwHZWDVqkUDpwDDGdyt0kYQ7qoKanIxv/A9wv6ekq0LQ/yLlOcelkxQeb8Glu4RXe+krRvrASw1eBAQ3mvNKpngwF8vtlyoil41PjHUOKALMJtNpywckRRYOk4703ylWIzTfdBlrZ6VmDBjdC5723G1HAx3R/x+o+08++RNiFaN06Ly5QbZZvjnealDfSKz1VKRHWeXggaW87rl4n0SOOWnvabKs4ZWRXTS0dhWK+KD/yYYQypTslDSXQrmyMkpc1Zcb4p9RTjodXxGCWdsR5i5+Ro/RiJvxWwwaO3YW6eaSavV0ROqANQ+A+GizMlxsVjl6G5Ooh6ORdA7jTNWmK44Icgyz6QFNh+J3NibxVK2GZxsQRi+N3HXeKYtq5SDXARA0BsaJQzYfDotA9LFgmFKg9jVhtcc1V3rtpaJ5sab8tdBTPPyN/XT8fA0GxlIX+hjLd3E9wB7qzNR6PZ84UKDxhCGWrLuIoSzuCbr+TD9UCJprsfTu8kr8Pur4rrxm7Zu1MsJRR9U5Ut+O9FZfw4SqGykyTGGh0v1gDG8esKpTW5MKNk9dRwDNHEmIF6tE6NeXDlzovf8VW6z9JA6AVUkgiFjDvLUY5MgyTqPB9RJNMSAZBzrkZgXyHlmFz2rvPqQGFbAtukjeRNS+nkVayLqfQnqpgthBvsgDUgFn03z0U2Svb094Q5XHMeQ4KM/nMWTEUC+8cybYhwVklJU7FBl9nzs66wkMZpViIrVWwSB2k9R1r/ZQcmeL+LR+WwgCtRs4It1rNVkxXwYHjsFM2Ce46TWhbVMF/h7Ap4lOTS15EHC8RvIBBcR2w1iJ+3pXiMeihArTELVnQsS31X3kxbBp3dGvLvW7PxDlwwdUQOXnMoimUCI/h0uPdSRULPAQHgSp9+TwqI0Uswb7cEiXnN8PySN5Tk109CYJjKqCxtuXu+oOeQV2I/0knQLd2zol+yIzNLj5a/HvyN+kOhIGi6TrFThuiVbbtnTtRM1CzKtFGuw5lYrwskkkvenoSLNY0N85QCU8ugjc3Bw4JZ9jNrDUaJ1Vb5/+1GQx/q/Dbxnl+FK6wMLjXy5JdFDeQyjBEBqndQxrs9cM5xBnl6AYs2Xymydafm2qK0cEDzwOPMpVcKU8sXS/AHvtgsn+rjMzW0wrQblWE0Ht/74GgfCj4diCDtzxQ0ggi6yJD+yhLZtVVqmKS3Gwnj9RxPLNfpgzPP01eYyBBi/W0RWTzcTb8iMxWX52MTU0oX9//4I7CAPXn0ZhpWAAIvUmkfjwfEModH7iwwaNtZFlT2rlzeshbP++UCEtqbwvveDRhmr5sMYkl+duEOca5156fcRy4tQ8Y3moNcKFKzHGMenShEIHz+W5KE=\",\n        \"PrivateKeyPassword\":\"12345678\"\n    }\n"
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/csds/EKU9003173C9",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"csds",
+								"EKU9003173C9"
+							]
+						},
+						"description": "Modifica el certificado asociado a un RFC"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar CSD",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/csds/EKU9003173C9",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"csds",
+								"EKU9003173C9"
+							]
+						},
+						"description": "Elimina el CSD asociado con determinado RFC"
+					},
+					"response": []
+				}
+			],
+			"description": "Tambien llamados CSD (Certificado de Sello Digital).\n\nSon necesarios para hacer el timbrado (Validación de la factura ante el SAT).\n\nY se requiere uno para cada RFC con el que se desee facturar",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Complementos",
+			"item": [
+				{
+					"name": "Complemento de pago",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"116\",\r\n                \"OperationNumber\": \"126456\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"11c9536f-6bd0-4c32-9337-f8a73a15b775\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"Serie\": \"1111\",\r\n                        \"Folio\": \"45\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PPD\",\r\n                        \"PreviousBalanceAmount\": \"116\",\r\n                        \"AmountPaid\": \"111.75\",\r\n                        \"ImpSaldoInsoluto\": \"0\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Name\": \"IVA\",\r\n                                \"Rate\": \"0.16\",\r\n                                \"Total\": \"16\",\r\n                                \"Base\": \"100\",\r\n                                \"IsRetention\": \"false\"\r\n                            },\r\n                            {\r\n                                \"Name\": \"ISR\",\r\n                                \"Rate\": 0.0125,\r\n                                \"Total\": 1.25,\r\n                                \"Base\": 100.00,\r\n                                \"IsRetention\": true\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/3/cfdis",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"3",
+								"cfdis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complemento de donativos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NameId\": \"9\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"DONST\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"DONATIVO\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Complemento\": {\r\n        \"Donation\": {\r\n            \"AuthorizationDate\": \"30/01/2019\",\r\n            \"AuthorizationNumber\": \"B400-05-08-2014-005\",\r\n            \"Legend\": \"El comprobante es un donativo\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"Description\": \"Cobija de lana y algodon\",\r\n            \"ProductCode\": \"20102000\",\r\n            \"IdentificationNumber\": \"FP114\",\r\n            \"Quantity\": \"3\",\r\n            \"Subtotal\": \"3000\",\r\n            \"Total\": \"3000\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"EA\",\r\n            \"UnitPrice\": \"1000\",\r\n            \"TaxObject\": \"01\"\r\n        }\r\n    ],\r\n    \"Receiver\": {\r\n        \"Rfc\": \"CACX7605101P8\",\r\n        \"CfdiUse\": \"D04\",\r\n        \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n        \"FiscalRegime\": \"605\",\r\n        \"TaxZipCode\": \"10740\"\r\n    },\r\n        \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/3/cfdis",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"3",
+								"cfdis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complemento concepto por cuenta de terceros",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"Por cuenta de terceros\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G03\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\",\r\n        \"TaxResidence\": \"MEX\",\r\n        \"Address\": {\r\n            \"Street\": \"Guadalcazar del receptor\",\r\n            \"ExteriorNumber\": \"300\",\r\n            \"InteriorNumber\": \"A\",\r\n            \"Neighborhood\": \"Las lomas\",\r\n            \"ZipCode\": \"65000\",\r\n            \"Municipality\": \"San Luis Potosi\",\r\n            \"State\": \"San Luis Potosi\",\r\n            \"Country\": \"México\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"25173108\",\r\n            \"Description\": \"GPS estandar pruebas\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Quantity\": 1.0,\r\n            \"UnitPrice\": 100.0,\r\n            \"Subtotal\": 100.00,\r\n            \"TaxObject\": \"02\",\r\n            \"ThirdPartyAccount\": {\r\n                \"Rfc\": \"CACX7605101P8\",\r\n                \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n                \"FiscalRegime\": \"616\",\r\n                \"TaxZipCode\": \"10740\"\r\n            },\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/3/cfdis",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"3",
+								"cfdis"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{Password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{UserName}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "format",
+			"value": "pdf",
+			"type": "string"
+		},
+		{
+			"key": "UserName",
+			"value": "pruebas",
+			"type": "string"
+		},
+		{
+			"key": "Password",
+			"value": "pruebas2011",
+			"type": "string"
+		}
+	]
+}
