@@ -295,47 +295,6 @@
 					]
 				},
 				{
-					"name": "Cancelar un Cfdi",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "{{SERVER}}/api-lite/cfdis/0L864p3ksJ3MjWf3or242g2",
-							"host": [
-								"{{SERVER}}"
-							],
-							"path": [
-								"api-lite",
-								"cfdis",
-								"0L864p3ksJ3MjWf3or242g2"
-							],
-							"query": [
-								{
-									"key": "motive",
-									"value": "02",
-									"disabled": true
-								},
-								{
-									"key": "uuidReplacement",
-									"value": "",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Obtener acuse de cancelación",
 					"request": {
 						"method": "GET",
@@ -545,6 +504,47 @@
 								{
 									"key": "total",
 									"value": "11000.00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar un Cfdi",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/cfdis/0L864p3ksJ3MjWf3or242g2",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"cfdis",
+								"0L864p3ksJ3MjWf3or242g2"
+							],
+							"query": [
+								{
+									"key": "motive",
+									"value": "02",
+									"disabled": true
+								},
+								{
+									"key": "uuidReplacement",
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
