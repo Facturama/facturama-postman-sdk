@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3b256f4a-3c1b-44e3-ba94-fed4e3f4d70b",
+		"_postman_id": "d840b3c8-3094-4485-a2e8-f63abb5373a6",
 		"name": "Facturama API Multiemisor",
 		"description": "API que permiete trabajar con multiples emidores, cargando los certificdados de cada uno de ellos.\nMejora la concurrencia.\n\nPero:\nNo tiene opcion de acceder al la interfaz web.\nNi tampoco almacena catálogos",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -16,6 +16,21 @@
 						{
 							"name": "Descargar retenciones",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -41,6 +56,21 @@
 						{
 							"name": "Filtrar Retenciones",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -65,6 +95,21 @@
 						{
 							"name": "Retenciones v1",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -132,6 +177,21 @@
 				{
 					"name": "Enviar Cfdi por email",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -206,6 +266,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -234,6 +309,21 @@
 				{
 					"name": "Obtener detalle del Cfdi",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -254,49 +344,26 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "Obtener el detalle del CFDI con el Id y tipo seleccionado",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "formt",
-										"value": "pdf"
-									}
-								],
-								"url": {
-									"raw": "{{SERVER}}/api/Cfdi/:format/{type}/{id}",
-									"host": [
-										"{{SERVER}}"
-									],
-									"path": [
-										"api",
-										"Cfdi",
-										":format",
-										"{type}",
-										"{id}"
-									],
-									"variable": [
-										{
-											"key": "format",
-											"value": ""
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Obtener acuse de cancelación",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -323,6 +390,21 @@
 				{
 					"name": "Obtener Cfdis filtrados",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -354,6 +436,21 @@
 				{
 					"name": "Obtener Cfdis filtrados Completo",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -443,11 +540,23 @@
 				},
 				{
 					"name": "CFDI 4.0 Ingreso",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
-						"method": "GET",
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
 						"header": [
 							{
 								"key": "User-Agent",
@@ -457,12 +566,23 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/3/cfdis",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"3",
+								"cfdis"
+							]
 						}
 					},
 					"response": []
@@ -470,6 +590,21 @@
 				{
 					"name": "Status CFDI",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -513,6 +648,21 @@
 				{
 					"name": "Cancelar un Cfdi",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -554,6 +704,21 @@
 				{
 					"name": "Cancelar con Motivo",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -584,6 +749,21 @@
 				{
 					"name": "Obtener CSD a partir del RFC",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -614,12 +794,12 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "pruebas2022",
+									"value": "{{Password}}",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "sdkpruebas",
+									"value": "{{UserName}}",
 									"type": "string"
 								}
 							]
@@ -638,7 +818,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n        \"Rfc\": \"EKU9003173C9\",\n        \"Certificate\": \"MIIFsDCCA5igAwIBAgIUMzAwMDEwMDAwMDA1MDAwMDM0MTYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWxpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMjMwNTE4MTE0MzUxWhcNMjcwNTE4MTE0MzUxWjCB1zEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gVkFEQTgwMDkyN0RKMzEeMBwGA1UEBRMVIC8gVkFEQTgwMDkyN0hTUlNSTDA1MRMwEQYDVQQLEwpTdWN1cnNhbCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtmecO6n2GS0zL025gbHGQVxznPDICoXzR2uUngz4DqxVUC/w9cE6FxSiXm2ap8Gcjg7wmcZfm85EBaxCx/0J2u5CqnhzIoGCdhBPuhWQnIh5TLgj/X6uNquwZkKChbNe9aeFirU/JbyN7Egia9oKH9KZUsodiM/pWAH00PCtoKJ9OBcSHMq8Rqa3KKoBcfkg1ZrgueffwRLws9yOcRWLb02sDOPzGIm/jEFicVYt2Hw1qdRE5xmTZ7AGG0UHs+unkGjpCVeJ+BEBn0JPLWVvDKHZAQMj6s5Bku35+d/MyATkpOPsGT/VTnsouxekDfikJD1f7A1ZpJbqDpkJnss3vQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAFaUgj5PqgvJigNMgtrdXZnbPfVBbukAbW4OGnUhNrA7SRAAfv2BSGk16PI0nBOr7qF2mItmBnjgEwk+DTv8Zr7w5qp7vleC6dIsZFNJoa6ZndrE/f7KO1CYruLXr5gwEkIyGfJ9NwyIagvHHMszzyHiSZIA850fWtbqtythpAliJ2jF35M5pNS+YTkRB+T6L/c6m00ymN3q9lT1rB03YywxrLreRSFZOSrbwWfg34EJbHfbFXpCSVYdJRfiVdvHnewN0r5fUlPtR9stQHyuqewzdkyb5jTTw02D2cUfL57vlPStBj7SEi3uOWvLrsiDnnCIxRMYJ2UA2ktDKHk+zWnsDmaeleSzonv2CHW42yXYPCvWi88oE1DJNYLNkIjua7MxAnkNZbScNw01A6zbLsZ3y8G6eEYnxSTRfwjd8EP4kdiHNJftm7Z4iRU7HOVh79/lRWB+gd171s3d/mI9kte3MRy6V8MMEMCAnMboGpaooYwgAmwclI2XZCczNWXfhaWe0ZS5PmytD/GDpXzkX0oEgY9K/uYo5V77NdZbGAjmyi8cE2B2ogvyaN2XfIInrZPgEffJ4AB7kFA2mwesdLOCh0BLD9itmCve3A1FGR4+stO2ANUoiI3w3Tv2yQSg4bjeDlJ08lXaaFCLW2peEXMXjQUk7fmpb5MNuOUTW6BE=\",\n        \"PrivateKey\": \"MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIAgEAAoIBAQACAggAMBQGCCqGSIb3DQMHBAgwggS/AgEAMASCBMh4EHl7aNSCaMDA1VlRoXCZ5UUmqErAbucoZQObOaLUEm+I+QZ7Y8Giupo+F1XWkLvAsdk/uZlJcTfKLJyJbJwsQYbSpLOCLataZ4O5MVnnmMbfG//NKJn9kSMvJQZhSwAwoGLYDm1ESGezrvZabgFJnoQv8Si1nAhVGTk9FkFBesxRzq07dmZYwFCnFSX4xt2fDHs1PMpQbeq83aL/PzLCce3kxbYSB5kQlzGtUYayiYXcu0cVRu228VwBLCD+2wTDDoCmRXtPesgrLKUR4WWWb5N2AqAU1mNDC+UEYsENAerOFXWnmwrcTAu5qyZ7GsBMTpipW4Dbou2yqQ0lpA/aB06n1kz1aL6mNqGPaJ+OqoFuc8Ugdhadd+MmjHfFzoI20SZ3b2geCsUMNCsAd6oXMsZdWm8lzjqCGWHFeol0ik/xHMQvuQkkeCsQ28PBxdnUgf7ZGer+TN+2ZLd2kvTBOk6pIVgy5yC6cZ+o1Tloql9hYGa6rT3xcMbXlW+9e5jM2MWXZliVW3ZhaPjptJFDbIfWxJPjz4QvKyJk0zok4muv13Iiwj2bCyefUTRz6psqI4cGaYm9JpscKO2RCJN8UluYGbbWmYQU+Int6LtZj/lv8p6xnVjWxYI+rBPdtkpfFYRp+MJiXjgPw5B6UGuoruv7+vHjOLHOotRo+RdjZt7NqL9dAJnl1Qb2jfW6+d7NYQSI/bAwxO0sk4taQIT6Gsu/8kfZOPC2xk9rphGqCSS/4q3Os0MMjA1bcJLyoWLp13pqhK6bmiiHw0BBXH4fbEp4xjSbpPx4tHXzbdn8oDsHKZkWh3pPC2J/nVl0k/yF1KDVowVtMDXE47k6TGVcBoqe8PDXCG9+vjRpzIidqNo5qebaUZu6riWMWzldz8x3Z/jLWXuDiM7/Yscn0Z2GIlfoeyz+GwP2eTdOw9EUedHjEQuJY32bq8LICimJ4Ht+zMJKUyhwVQyAER8byzQBwTYmYP5U0wdsyIFitphw+/IH8+v08Ia1iBLPQAeAvRfTTIFLCs8foyUrj5Zv2B/wTYIZy6ioUM+qADeXyo45uBLLqkN90Rf6kiTqDld78NxwsfyR5MxtJLVDFkmf2IMMJHTqSfhbi+7QJaC11OOUJTD0v9wo0X/oO5GvZhe0ZaGHnm9zqTopALuFEAxcaQlc4R81wjC4wrIrqWnbcl2dxiBtD73KW+wcC9ymsLf4I8BEmiN25lx/OUc1IHNyXZJYSFkEfaxCEZWKcnbiyf5sqFSSlEqZLc4lUPJFAoP6s1FHVcyO0odWqdadhRZLZC9RCzQgPlMRtji/OXy5phh7diOBZv5UYp5nb+MZ2NAB/eFXm2JLguxjvEstuvTDmZDUb6Uqv++RdhO5gvKf/AcwU38ifaHQ9uvRuDocYwVxZS2nr9rOwZ8nAh+P2o4e0tEXjxFKQGhxXYkn75H3hhfnFYjik/2qunHBBZfcdG148MaNP6DjX33M238T9Zw/GyGx00JMogr2pdP4JAErv9a5yt4YR41KGf8guSOUbOXVARw6+ybh7+meb7w4BeTlj3aZkv8tVGdfIt3lrwVnlbzhLjeQY6PplKp3/a5Kr5yM0T4wJoKQQ6v3vSNmrhpbuAtKxpMILe8CQoo=\",\n        \"PrivateKeyPassword\": \"12345678a\"\n}"
+							"raw": "{\n    \"Rfc\": \"EKU9003173C9\",\n    \"Certificate\": \"MIIFsDCCA5igAwIBAgIUMzAwMDEwMDAwMDA1MDAwMDM0MTYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWxpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMjMwNTE4MTE0MzUxWhcNMjcwNTE4MTE0MzUxWjCB1zEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gVkFEQTgwMDkyN0RKMzEeMBwGA1UEBRMVIC8gVkFEQTgwMDkyN0hTUlNSTDA1MRMwEQYDVQQLEwpTdWN1cnNhbCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtmecO6n2GS0zL025gbHGQVxznPDICoXzR2uUngz4DqxVUC/w9cE6FxSiXm2ap8Gcjg7wmcZfm85EBaxCx/0J2u5CqnhzIoGCdhBPuhWQnIh5TLgj/X6uNquwZkKChbNe9aeFirU/JbyN7Egia9oKH9KZUsodiM/pWAH00PCtoKJ9OBcSHMq8Rqa3KKoBcfkg1ZrgueffwRLws9yOcRWLb02sDOPzGIm/jEFicVYt2Hw1qdRE5xmTZ7AGG0UHs+unkGjpCVeJ+BEBn0JPLWVvDKHZAQMj6s5Bku35+d/MyATkpOPsGT/VTnsouxekDfikJD1f7A1ZpJbqDpkJnss3vQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAFaUgj5PqgvJigNMgtrdXZnbPfVBbukAbW4OGnUhNrA7SRAAfv2BSGk16PI0nBOr7qF2mItmBnjgEwk+DTv8Zr7w5qp7vleC6dIsZFNJoa6ZndrE/f7KO1CYruLXr5gwEkIyGfJ9NwyIagvHHMszzyHiSZIA850fWtbqtythpAliJ2jF35M5pNS+YTkRB+T6L/c6m00ymN3q9lT1rB03YywxrLreRSFZOSrbwWfg34EJbHfbFXpCSVYdJRfiVdvHnewN0r5fUlPtR9stQHyuqewzdkyb5jTTw02D2cUfL57vlPStBj7SEi3uOWvLrsiDnnCIxRMYJ2UA2ktDKHk+zWnsDmaeleSzonv2CHW42yXYPCvWi88oE1DJNYLNkIjua7MxAnkNZbScNw01A6zbLsZ3y8G6eEYnxSTRfwjd8EP4kdiHNJftm7Z4iRU7HOVh79/lRWB+gd171s3d/mI9kte3MRy6V8MMEMCAnMboGpaooYwgAmwclI2XZCczNWXfhaWe0ZS5PmytD/GDpXzkX0oEgY9K/uYo5V77NdZbGAjmyi8cE2B2ogvyaN2XfIInrZPgEffJ4AB7kFA2mwesdLOCh0BLD9itmCve3A1FGR4+stO2ANUoiI3w3Tv2yQSg4bjeDlJ08lXaaFCLW2peEXMXjQUk7fmpb5MNuOUTW6BE=\",\n    \"PrivateKey\": \"MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIAgEAAoIBAQACAggAMBQGCCqGSIb3DQMHBAgwggS/AgEAMASCBMh4EHl7aNSCaMDA1VlRoXCZ5UUmqErAbucoZQObOaLUEm+I+QZ7Y8Giupo+F1XWkLvAsdk/uZlJcTfKLJyJbJwsQYbSpLOCLataZ4O5MVnnmMbfG//NKJn9kSMvJQZhSwAwoGLYDm1ESGezrvZabgFJnoQv8Si1nAhVGTk9FkFBesxRzq07dmZYwFCnFSX4xt2fDHs1PMpQbeq83aL/PzLCce3kxbYSB5kQlzGtUYayiYXcu0cVRu228VwBLCD+2wTDDoCmRXtPesgrLKUR4WWWb5N2AqAU1mNDC+UEYsENAerOFXWnmwrcTAu5qyZ7GsBMTpipW4Dbou2yqQ0lpA/aB06n1kz1aL6mNqGPaJ+OqoFuc8Ugdhadd+MmjHfFzoI20SZ3b2geCsUMNCsAd6oXMsZdWm8lzjqCGWHFeol0ik/xHMQvuQkkeCsQ28PBxdnUgf7ZGer+TN+2ZLd2kvTBOk6pIVgy5yC6cZ+o1Tloql9hYGa6rT3xcMbXlW+9e5jM2MWXZliVW3ZhaPjptJFDbIfWxJPjz4QvKyJk0zok4muv13Iiwj2bCyefUTRz6psqI4cGaYm9JpscKO2RCJN8UluYGbbWmYQU+Int6LtZj/lv8p6xnVjWxYI+rBPdtkpfFYRp+MJiXjgPw5B6UGuoruv7+vHjOLHOotRo+RdjZt7NqL9dAJnl1Qb2jfW6+d7NYQSI/bAwxO0sk4taQIT6Gsu/8kfZOPC2xk9rphGqCSS/4q3Os0MMjA1bcJLyoWLp13pqhK6bmiiHw0BBXH4fbEp4xjSbpPx4tHXzbdn8oDsHKZkWh3pPC2J/nVl0k/yF1KDVowVtMDXE47k6TGVcBoqe8PDXCG9+vjRpzIidqNo5qebaUZu6riWMWzldz8x3Z/jLWXuDiM7/Yscn0Z2GIlfoeyz+GwP2eTdOw9EUedHjEQuJY32bq8LICimJ4Ht+zMJKUyhwVQyAER8byzQBwTYmYP5U0wdsyIFitphw+/IH8+v08Ia1iBLPQAeAvRfTTIFLCs8foyUrj5Zv2B/wTYIZy6ioUM+qADeXyo45uBLLqkN90Rf6kiTqDld78NxwsfyR5MxtJLVDFkmf2IMMJHTqSfhbi+7QJaC11OOUJTD0v9wo0X/oO5GvZhe0ZaGHnm9zqTopALuFEAxcaQlc4R81wjC4wrIrqWnbcl2dxiBtD73KW+wcC9ymsLf4I8BEmiN25lx/OUc1IHNyXZJYSFkEfaxCEZWKcnbiyf5sqFSSlEqZLc4lUPJFAoP6s1FHVcyO0odWqdadhRZLZC9RCzQgPlMRtji/OXy5phh7diOBZv5UYp5nb+MZ2NAB/eFXm2JLguxjvEstuvTDmZDUb6Uqv++RdhO5gvKf/AcwU38ifaHQ9uvRuDocYwVxZS2nr9rOwZ8nAh+P2o4e0tEXjxFKQGhxXYkn75H3hhfnFYjik/2qunHBBZfcdG148MaNP6DjX33M238T9Zw/GyGx00JMogr2pdP4JAErv9a5yt4YR41KGf8guSOUbOXVARw6+ybh7+meb7w4BeTlj3aZkv8tVGdfIt3lrwVnlbzhLjeQY6PplKp3/a5Kr5yM0T4wJoKQQ6v3vSNmrhpbuAtKxpMILe8CQoo=\",\n    \"PrivateKeyPassword\": \"12345678a\"\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/api-lite/csds",
@@ -657,6 +837,21 @@
 				{
 					"name": "Obtener los CSD cargados",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -682,6 +877,21 @@
 				{
 					"name": "Actualizar CSD",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -696,7 +906,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n        \"Rfc\": \"EKU9003173C9\",\n        \"Certificate\": \"MIIFuzCCA6OgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDI0MzQwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNjE3MTk0NDE0WhcNMjMwNjE3MTk0NDE0WjCB4jEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gWElRQjg5MTExNlFFNDEeMBwGA1UEBRMVIC8gWElRQjg5MTExNk1HUk1aUjA1MR4wHAYDVQQLExVFc2N1ZWxhIEtlbXBlciBVcmdhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCN0peKpgfOL75iYRv1fqq+oVYsLPVUR/GibYmGKc9InHFy5lYF6OTYjnIIvmkOdRobbGlCUxORX/tLsl8Ya9gm6Yo7hHnODRBIDup3GISFzB/96R9K/MzYQOcscMIoBDARaycnLvy7FlMvO7/rlVnsSARxZRO8Kz8Zkksj2zpeYpjZIya/369+oGqQk1cTRkHo59JvJ4Tfbk/3iIyf4H/Ini9nBe9cYWo0MnKob7DDt/vsdi5tA8mMtA953LapNyCZIDCRQQlUGNgDqY9/8F5mUvVgkcczsIgGdvf9vMQPSf3jjCiKj7j6ucxl1+FwJWmbvgNmiaUR/0q4m2rm78lFAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBCwUAA4ICAQBcpj1TjT4jiinIujIdAlFzE6kRwYJCnDG08zSp4kSnShjxADGEXH2chehKMV0FY7c4njA5eDGdA/G2OCTPvF5rpeCZP5Dw504RZkYDl2suRz+wa1sNBVpbnBJEK0fQcN3IftBwsgNFdFhUtCyw3lus1SSJbPxjLHS6FcZZ51YSeIfcNXOAuTqdimusaXq15GrSrCOkM6n2jfj2sMJYM2HXaXJ6rGTEgYmhYdwxWtil6RfZB+fGQ/H9I9WLnl4KTZUS6C9+NLHh4FPDhSk19fpS2S/56aqgFoGAkXAYt9Fy5ECaPcULIfJ1DEbsXKyRdCv3JY89+0MNkOdaDnsemS2o5Gl08zI4iYtt3L40gAZ60NPh31kVLnYNsmvfNxYyKp+AeJtDHyW9w7ftM0Hoi+BuRmcAQSKFV3pk8j51la+jrRBrAUv8blbRcQ5BiZUwJzHFEKIwTsRGoRyEx96sNnB03n6GTwjIGz92SmLdNl95r9rkvp+2m4S6q1lPuXaFg7DGBrXWC8iyqeWE2iobdwIIuXPTMVqQb12m1dAkJVRO5NdHnP/MpqOvOgLqoZBNHGyBg4Gqm4sCJHCxA1c8Elfa2RQTCk0tAzllL4vOnI1GHkGJn65xokGsaU4B4D36xh7eWrfj4/pgWHmtoDAYa8wzSwo2GVCZOs+mtEgOQB91/g==\",\n        \"PrivateKey\": \"MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIAgEAAoIBAQACAggAMBQGCCqGSIb3DQMHBAgwggS8AgEAMASCBMh4EHl7aNSCaMDA1VlRoXCZ5UUmqErAbucRFLOMmsAaFNkyWR0dXIAh0CMjE6NpQIMZhQ0HH/4tHgmwh4kCawGjIwERoG6/IH3mCt7u19J5+m6gUEGOJdEMXj976E5lKCd/EG6t6lCq66GE3rgux/nFmeQZvsjLlzPyhe2j+X81LrGudITTjDdgLI0EdbdV9CUJwWbibzrVxjuAVShRh07XPL/DiEw3Wk2+kdy4cfWmMvh0U55p0RKZopNkWuVVSvr3ai7ZNCwHZWDVqkUDpwDDGdyt0kYQ7qoKanIxv/A9wv6ekq0LQ/yLlOcelkxQeb8Glu4RXe+krRvrASw1eBAQ3mvNKpngwF8vtlyoil41PjHUOKALMJtNpywckRRYOk4703ylWIzTfdBlrZ6VmDBjdC5723G1HAx3R/x+o+08++RNiFaN06Ly5QbZZvjnealDfSKz1VKRHWeXggaW87rl4n0SOOWnvabKs4ZWRXTS0dhWK+KD/yYYQypTslDSXQrmyMkpc1Zcb4p9RTjodXxGCWdsR5i5+Ro/RiJvxWwwaO3YW6eaSavV0ROqANQ+A+GizMlxsVjl6G5Ooh6ORdA7jTNWmK44Icgyz6QFNh+J3NibxVK2GZxsQRi+N3HXeKYtq5SDXARA0BsaJQzYfDotA9LFgmFKg9jVhtcc1V3rtpaJ5sab8tdBTPPyN/XT8fA0GxlIX+hjLd3E9wB7qzNR6PZ84UKDxhCGWrLuIoSzuCbr+TD9UCJprsfTu8kr8Pur4rrxm7Zu1MsJRR9U5Ut+O9FZfw4SqGykyTGGh0v1gDG8esKpTW5MKNk9dRwDNHEmIF6tE6NeXDlzovf8VW6z9JA6AVUkgiFjDvLUY5MgyTqPB9RJNMSAZBzrkZgXyHlmFz2rvPqQGFbAtukjeRNS+nkVayLqfQnqpgthBvsgDUgFn03z0U2Svb094Q5XHMeQ4KM/nMWTEUC+8cybYhwVklJU7FBl9nzs66wkMZpViIrVWwSB2k9R1r/ZQcmeL+LR+WwgCtRs4It1rNVkxXwYHjsFM2Ce46TWhbVMF/h7Ap4lOTS15EHC8RvIBBcR2w1iJ+3pXiMeihArTELVnQsS31X3kxbBp3dGvLvW7PxDlwwdUQOXnMoimUCI/h0uPdSRULPAQHgSp9+TwqI0Uswb7cEiXnN8PySN5Tk109CYJjKqCxtuXu+oOeQV2I/0knQLd2zol+yIzNLj5a/HvyN+kOhIGi6TrFThuiVbbtnTtRM1CzKtFGuw5lYrwskkkvenoSLNY0N85QCU8ugjc3Bw4JZ9jNrDUaJ1Vb5/+1GQx/q/Dbxnl+FK6wMLjXy5JdFDeQyjBEBqndQxrs9cM5xBnl6AYs2Xymydafm2qK0cEDzwOPMpVcKU8sXS/AHvtgsn+rjMzW0wrQblWE0Ht/74GgfCj4diCDtzxQ0ggi6yJD+yhLZtVVqmKS3Gwnj9RxPLNfpgzPP01eYyBBi/W0RWTzcTb8iMxWX52MTU0oX9//4I7CAPXn0ZhpWAAIvUmkfjwfEModH7iwwaNtZFlT2rlzeshbP++UCEtqbwvveDRhmr5sMYkl+duEOca5156fcRy4tQ8Y3moNcKFKzHGMenShEIHz+W5KE=\",\n        \"PrivateKeyPassword\":\"12345678\"\n    }\n"
+							"raw": "{\n    \"Rfc\": \"EKU9003173C9\",\n    \"Certificate\": \"MIIFsDCCA5igAwIBAgIUMzAwMDEwMDAwMDA1MDAwMDM0MTYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWxpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMjMwNTE4MTE0MzUxWhcNMjcwNTE4MTE0MzUxWjCB1zEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gVkFEQTgwMDkyN0RKMzEeMBwGA1UEBRMVIC8gVkFEQTgwMDkyN0hTUlNSTDA1MRMwEQYDVQQLEwpTdWN1cnNhbCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtmecO6n2GS0zL025gbHGQVxznPDICoXzR2uUngz4DqxVUC/w9cE6FxSiXm2ap8Gcjg7wmcZfm85EBaxCx/0J2u5CqnhzIoGCdhBPuhWQnIh5TLgj/X6uNquwZkKChbNe9aeFirU/JbyN7Egia9oKH9KZUsodiM/pWAH00PCtoKJ9OBcSHMq8Rqa3KKoBcfkg1ZrgueffwRLws9yOcRWLb02sDOPzGIm/jEFicVYt2Hw1qdRE5xmTZ7AGG0UHs+unkGjpCVeJ+BEBn0JPLWVvDKHZAQMj6s5Bku35+d/MyATkpOPsGT/VTnsouxekDfikJD1f7A1ZpJbqDpkJnss3vQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAFaUgj5PqgvJigNMgtrdXZnbPfVBbukAbW4OGnUhNrA7SRAAfv2BSGk16PI0nBOr7qF2mItmBnjgEwk+DTv8Zr7w5qp7vleC6dIsZFNJoa6ZndrE/f7KO1CYruLXr5gwEkIyGfJ9NwyIagvHHMszzyHiSZIA850fWtbqtythpAliJ2jF35M5pNS+YTkRB+T6L/c6m00ymN3q9lT1rB03YywxrLreRSFZOSrbwWfg34EJbHfbFXpCSVYdJRfiVdvHnewN0r5fUlPtR9stQHyuqewzdkyb5jTTw02D2cUfL57vlPStBj7SEi3uOWvLrsiDnnCIxRMYJ2UA2ktDKHk+zWnsDmaeleSzonv2CHW42yXYPCvWi88oE1DJNYLNkIjua7MxAnkNZbScNw01A6zbLsZ3y8G6eEYnxSTRfwjd8EP4kdiHNJftm7Z4iRU7HOVh79/lRWB+gd171s3d/mI9kte3MRy6V8MMEMCAnMboGpaooYwgAmwclI2XZCczNWXfhaWe0ZS5PmytD/GDpXzkX0oEgY9K/uYo5V77NdZbGAjmyi8cE2B2ogvyaN2XfIInrZPgEffJ4AB7kFA2mwesdLOCh0BLD9itmCve3A1FGR4+stO2ANUoiI3w3Tv2yQSg4bjeDlJ08lXaaFCLW2peEXMXjQUk7fmpb5MNuOUTW6BE=\",\n    \"PrivateKey\": \"MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIAgEAAoIBAQACAggAMBQGCCqGSIb3DQMHBAgwggS/AgEAMASCBMh4EHl7aNSCaMDA1VlRoXCZ5UUmqErAbucoZQObOaLUEm+I+QZ7Y8Giupo+F1XWkLvAsdk/uZlJcTfKLJyJbJwsQYbSpLOCLataZ4O5MVnnmMbfG//NKJn9kSMvJQZhSwAwoGLYDm1ESGezrvZabgFJnoQv8Si1nAhVGTk9FkFBesxRzq07dmZYwFCnFSX4xt2fDHs1PMpQbeq83aL/PzLCce3kxbYSB5kQlzGtUYayiYXcu0cVRu228VwBLCD+2wTDDoCmRXtPesgrLKUR4WWWb5N2AqAU1mNDC+UEYsENAerOFXWnmwrcTAu5qyZ7GsBMTpipW4Dbou2yqQ0lpA/aB06n1kz1aL6mNqGPaJ+OqoFuc8Ugdhadd+MmjHfFzoI20SZ3b2geCsUMNCsAd6oXMsZdWm8lzjqCGWHFeol0ik/xHMQvuQkkeCsQ28PBxdnUgf7ZGer+TN+2ZLd2kvTBOk6pIVgy5yC6cZ+o1Tloql9hYGa6rT3xcMbXlW+9e5jM2MWXZliVW3ZhaPjptJFDbIfWxJPjz4QvKyJk0zok4muv13Iiwj2bCyefUTRz6psqI4cGaYm9JpscKO2RCJN8UluYGbbWmYQU+Int6LtZj/lv8p6xnVjWxYI+rBPdtkpfFYRp+MJiXjgPw5B6UGuoruv7+vHjOLHOotRo+RdjZt7NqL9dAJnl1Qb2jfW6+d7NYQSI/bAwxO0sk4taQIT6Gsu/8kfZOPC2xk9rphGqCSS/4q3Os0MMjA1bcJLyoWLp13pqhK6bmiiHw0BBXH4fbEp4xjSbpPx4tHXzbdn8oDsHKZkWh3pPC2J/nVl0k/yF1KDVowVtMDXE47k6TGVcBoqe8PDXCG9+vjRpzIidqNo5qebaUZu6riWMWzldz8x3Z/jLWXuDiM7/Yscn0Z2GIlfoeyz+GwP2eTdOw9EUedHjEQuJY32bq8LICimJ4Ht+zMJKUyhwVQyAER8byzQBwTYmYP5U0wdsyIFitphw+/IH8+v08Ia1iBLPQAeAvRfTTIFLCs8foyUrj5Zv2B/wTYIZy6ioUM+qADeXyo45uBLLqkN90Rf6kiTqDld78NxwsfyR5MxtJLVDFkmf2IMMJHTqSfhbi+7QJaC11OOUJTD0v9wo0X/oO5GvZhe0ZaGHnm9zqTopALuFEAxcaQlc4R81wjC4wrIrqWnbcl2dxiBtD73KW+wcC9ymsLf4I8BEmiN25lx/OUc1IHNyXZJYSFkEfaxCEZWKcnbiyf5sqFSSlEqZLc4lUPJFAoP6s1FHVcyO0odWqdadhRZLZC9RCzQgPlMRtji/OXy5phh7diOBZv5UYp5nb+MZ2NAB/eFXm2JLguxjvEstuvTDmZDUb6Uqv++RdhO5gvKf/AcwU38ifaHQ9uvRuDocYwVxZS2nr9rOwZ8nAh+P2o4e0tEXjxFKQGhxXYkn75H3hhfnFYjik/2qunHBBZfcdG148MaNP6DjX33M238T9Zw/GyGx00JMogr2pdP4JAErv9a5yt4YR41KGf8guSOUbOXVARw6+ybh7+meb7w4BeTlj3aZkv8tVGdfIt3lrwVnlbzhLjeQY6PplKp3/a5Kr5yM0T4wJoKQQ6v3vSNmrhpbuAtKxpMILe8CQoo=\",\n    \"PrivateKeyPassword\": \"12345678a\"\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/api-lite/csds/EKU9003173C9",
@@ -716,6 +926,21 @@
 				{
 					"name": "Eliminar CSD",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -772,6 +997,21 @@
 				{
 					"name": "Complemento de pago",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -788,7 +1028,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Exportation\": \"01\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"116\",\r\n                \"OperationNumber\": \"126456\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"11c9536f-6bd0-4c32-9337-f8a73a15b775\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"Serie\": \"1111\",\r\n                        \"Folio\": \"45\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PPD\",\r\n                        \"PreviousBalanceAmount\": \"116\",\r\n                        \"AmountPaid\": \"111.75\",\r\n                        \"ImpSaldoInsoluto\": \"0\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Name\": \"IVA\",\r\n                                \"Rate\": \"0.16\",\r\n                                \"Total\": \"16\",\r\n                                \"Base\": \"100\",\r\n                                \"IsRetention\": \"false\"\r\n                            },\r\n                            {\r\n                                \"Name\": \"ISR\",\r\n                                \"Rate\": 0.0125,\r\n                                \"Total\": 1.25,\r\n                                \"Base\": 100.00,\r\n                                \"IsRetention\": true\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}"
+							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Exportation\": \"01\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"116\",\r\n                \"OperationNumber\": \"126456\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"11c9536f-6bd0-4c32-9337-f8a73a15b775\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"Serie\": \"1111\",\r\n                        \"Folio\": \"45\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PPD\",\r\n                        \"PreviousBalanceAmount\": \"116\",\r\n                        \"AmountPaid\": \"111.75\",\r\n                        \"ImpSaldoInsoluto\": \"0\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Name\": \"IVA\",\r\n                                \"Rate\": \"0.16\",\r\n                                \"Total\": \"16\",\r\n                                \"Base\": \"100\",\r\n                                \"IsRetention\": \"false\"\r\n                            },\r\n                            {\r\n                                \"Name\": \"ISR\",\r\n                                \"Rate\": 0.0125,\r\n                                \"Total\": 1.25,\r\n                                \"Base\": 100.00,\r\n                                \"IsRetention\": true\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/api-lite/3/cfdis",
@@ -807,6 +1047,21 @@
 				{
 					"name": "Complemento de donativos",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -842,6 +1097,21 @@
 				{
 					"name": "Complemento concepto por cuenta de terceros",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -858,7 +1128,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"Por cuenta de terceros\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Exportation\": \"01\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G03\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\",\r\n        \"TaxResidence\": \"MEX\",\r\n        \"Address\": {\r\n            \"Street\": \"Guadalcazar del receptor\",\r\n            \"ExteriorNumber\": \"300\",\r\n            \"InteriorNumber\": \"A\",\r\n            \"Neighborhood\": \"Las lomas\",\r\n            \"ZipCode\": \"65000\",\r\n            \"Municipality\": \"San Luis Potosi\",\r\n            \"State\": \"San Luis Potosi\",\r\n            \"Country\": \"México\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"25173108\",\r\n            \"Description\": \"GPS estandar pruebas\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Quantity\": 1.0,\r\n            \"UnitPrice\": 100.0,\r\n            \"Subtotal\": 100.00,\r\n            \"TaxObject\": \"02\",\r\n            \"ThirdPartyAccount\": {\r\n                \"Rfc\": \"CACX7605101P8\",\r\n                \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n                \"FiscalRegime\": \"616\",\r\n                \"TaxZipCode\": \"10740\"\r\n            },\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"Por cuenta de terceros\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Exportation\": \"01\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G03\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\",\r\n        \"TaxResidence\": \"MEX\",\r\n        \"Address\": {\r\n            \"Street\": \"Guadalcazar del receptor\",\r\n            \"ExteriorNumber\": \"300\",\r\n            \"InteriorNumber\": \"A\",\r\n            \"Neighborhood\": \"Las lomas\",\r\n            \"ZipCode\": \"65000\",\r\n            \"Municipality\": \"San Luis Potosi\",\r\n            \"State\": \"San Luis Potosi\",\r\n            \"Country\": \"México\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"25173108\",\r\n            \"Description\": \"GPS estandar pruebas\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Quantity\": 1.0,\r\n            \"UnitPrice\": 100.0,\r\n            \"Subtotal\": 100.00,\r\n            \"TaxObject\": \"02\",\r\n            \"ThirdPartyAccount\": {\r\n                \"Rfc\": \"CACX7605101P8\",\r\n                \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n                \"FiscalRegime\": \"616\",\r\n                \"TaxZipCode\": \"36257\"\r\n            },\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/api-lite/3/cfdis",
