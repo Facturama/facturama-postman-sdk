@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "05731f4b-2eb4-4961-a9e0-e0382b9cb6c9",
+		"_postman_id": "c689ece5-1532-4f80-a876-55467080d13c",
 		"name": "Facturama API Web",
 		"description": "# Introduction\n\nCatálogos del SAT, para CFDI 4.0\n\n# Overview\n\nDe acuerdo con con el Anexo 20 de la resolución miscelánea\n\n# Authentication\n\nSe emplea la autenticación básica, donde se coloca el usuario y la contraseña en cada llamada, colocados en el header de la llamada\n\n# Error Codes\n\nLos errores son mostrados de acuerdo a la situación\n\n# Rate limit\n\nLas peticiones por usuario son ilimitadas",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -13,6 +13,21 @@
 				{
 					"name": "Agregar cliente URE180429TM6",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -27,7 +42,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"Id\":\"\",\r\n\t\"Rfc\": \"URE180429TM6\",\r\n    \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n    \"FiscalRegime\": \"601\",\r\n    \"Email\": \"soporte-api@ejemplo.mx\",\r\n    \"EmailOp1\" : \"ejemplo@ejemplo.com\",\r\n    \"EmailOp2\" : \"ejemplo2@ejemplo.com\",\r\n    \"CfdiUse\": \"G03\",\r\n    \"TaxResidence\": \"65000\",\r\n    \"NumRegIdTrib\": \"131494-1055\",\r\n    \"TaxZipCode\": \"65000\",\r\n    \"Address\": \r\n\t{\r\n        \"Street\": \"Calle de Pruebas\",\r\n        \"ExteriorNumber\": \"123\",\r\n        \"InteriorNumber\": \"456\",\r\n        \"Neighborhood\": \"COLOMBIA\",\r\n        \"ZipCode\": \"65000\",\r\n        \"Locality\": \"NUEVO LEON\",\r\n        \"Municipality\": \"ANAHUAC\",\r\n        \"State\": \"NUEVO LEON\",\r\n        \"Country\": \"Mex\"\r\n    }\r\n}"
+							"raw": "{\r\n\t\"Id\":\"\",\r\n\t\"Rfc\": \"URE180429TM6\",\r\n    \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n    \"FiscalRegime\": \"601\",\r\n    \"Email\": \"soporte-api@ejemplo.mx\",\r\n    \"EmailOp1\" : \"ejemplo@ejemplo.com\",\r\n    \"EmailOp2\" : \"ejemplo2@ejemplo.com\",\r\n    \"CfdiUse\": \"G03\",\r\n    \"TaxResidence\": \"86991\",\r\n    \"NumRegIdTrib\": \"131494-1055\",\r\n    \"TaxZipCode\": \"86991\",\r\n    \"Address\": \r\n\t{\r\n        \"Street\": \"Calle de Pruebas\",\r\n        \"ExteriorNumber\": \"123\",\r\n        \"InteriorNumber\": \"456\",\r\n        \"Neighborhood\": \"COLOMBIA\",\r\n        \"ZipCode\": \"86991\",\r\n        \"Locality\": \"NUEVO LEON\",\r\n        \"Municipality\": \"ANAHUAC\",\r\n        \"State\": \"NUEVO LEON\",\r\n        \"Country\": \"Mex\"\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/Client",
@@ -78,6 +93,21 @@
 				{
 					"name": "Agregar cliente ZUÑ920208KL4",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -92,7 +122,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"Id\":\"\",\r\n\t\"Rfc\": \"ZUÑ920208KL4\",\r\n    \"Name\": \"ZAPATERIA URTADO ÑERI\",\r\n    \"FiscalRegime\": \"601\",\r\n    \"Email\": \"soporte-api@ejemplo.mx\",\r\n    \"EmailOp1\" : \"Ejemplo@ejemplo.com\",\r\n    \"EmailOp2\" : \"Ejemplo2@ejemplo.com\",\r\n    \"CfdiUse\": \"G03\",\r\n    \"TaxResidence\": \"77060\",\r\n    \"NumRegIdTrib\": \"1314941055\",\r\n    \"TaxZipCode\": \"77060\",\r\n    \"Address\": \r\n\t{\r\n        \"Street\": \"Calle de Pruebas\",\r\n        \"ExteriorNumber\": \"123\",\r\n        \"InteriorNumber\": \"456\",\r\n        \"Neighborhood\": \"COLOMBIA\",\r\n        \"ZipCode\": \"77060\",\r\n        \"Locality\": \"Chetumal\",\r\n        \"Municipality\": \"Othón P. Blanco\",\r\n        \"State\": \"Quintana Roo\",\r\n        \"Country\": \"Mex\"\r\n    }\r\n}"
+							"raw": "{\r\n\t\"Id\":\"\",\r\n\t\"Rfc\": \"ZUÑ920208KL4\",\r\n    \"Name\": \"ZAPATERIA URTADO ÑERI\",\r\n    \"FiscalRegime\": \"601\",\r\n    \"Email\": \"soporte-api@ejemplo.mx\",\r\n    \"EmailOp1\" : \"Ejemplo@ejemplo.com\",\r\n    \"EmailOp2\" : \"Ejemplo2@ejemplo.com\",\r\n    \"CfdiUse\": \"G03\",\r\n    \"TaxResidence\": \"34541\",\r\n    \"NumRegIdTrib\": \"1314941055\",\r\n    \"TaxZipCode\": \"34541\",\r\n    \"Address\": \r\n\t{\r\n        \"Street\": \"Calle de Pruebas\",\r\n        \"ExteriorNumber\": \"123\",\r\n        \"InteriorNumber\": \"456\",\r\n        \"Neighborhood\": \"COLOMBIA\",\r\n        \"ZipCode\": \"34541\",\r\n        \"Locality\": \"Chetumal\",\r\n        \"Municipality\": \"Othón P. Blanco\",\r\n        \"State\": \"Quintana Roo\",\r\n        \"Country\": \"Mex\"\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/Client",
@@ -143,6 +173,21 @@
 				{
 					"name": "Agregar cliente IAÑL750210963",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -157,7 +202,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"Id\":\"\",\r\n\t\"Rfc\": \"IAÑL750210963\",\r\n    \"Name\": \"LUIS IAN ÑUZCO\",\r\n    \"FiscalRegime\": \"605\",\r\n    \"Email\": \"soporte-api@ejemplo.mx\",\r\n    \"EmailOp1\" : \"Ejemplo@ejemplo.com\",\r\n    \"EmailOp2\" : \"Ejemplo2@ejemplo.com\",\r\n    \"CfdiUse\": \"D01\",\r\n    \"TaxResidence\": \"30230\",\r\n    \"NumRegIdTrib\": \"1314941055\",\r\n    \"TaxZipCode\": \"30230\",\r\n    \"Address\": \r\n\t{\r\n        \"Street\": \"Calle de Pruebas\",\r\n        \"ExteriorNumber\": \"123\",\r\n        \"InteriorNumber\": \"456\",\r\n        \"Neighborhood\": \"COLOMBIA\",\r\n        \"ZipCode\": \"30230\",\r\n        \"Locality\": \"Chetumal\",\r\n        \"Municipality\": \"Othón P. Blanco\",\r\n        \"State\": \"Quintana Roo\",\r\n        \"Country\": \"Mex\"\r\n    }\r\n}"
+							"raw": "{\r\n\t\"Id\":\"\",\r\n\t\"Rfc\": \"IAÑL750210963\",\r\n    \"Name\": \"LUIS IAN ÑUZCO\",\r\n    \"FiscalRegime\": \"605\",\r\n    \"Email\": \"soporte-api@ejemplo.mx\",\r\n    \"EmailOp1\" : \"Ejemplo@ejemplo.com\",\r\n    \"EmailOp2\" : \"Ejemplo2@ejemplo.com\",\r\n    \"CfdiUse\": \"D01\",\r\n    \"TaxResidence\": \"85256\",\r\n    \"NumRegIdTrib\": \"1314941055\",\r\n    \"TaxZipCode\": \"85256\",\r\n    \"Address\": \r\n\t{\r\n        \"Street\": \"Calle de Pruebas\",\r\n        \"ExteriorNumber\": \"123\",\r\n        \"InteriorNumber\": \"456\",\r\n        \"Neighborhood\": \"COLOMBIA\",\r\n        \"ZipCode\": \"85256\",\r\n        \"Locality\": \"Chetumal\",\r\n        \"Municipality\": \"Othón P. Blanco\",\r\n        \"State\": \"Quintana Roo\",\r\n        \"Country\": \"Mex\"\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/Client",
@@ -211,6 +256,21 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -283,6 +343,21 @@
 				{
 					"name": "Lista de clientes",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -306,6 +381,21 @@
 				{
 					"name": "Filtrados por RFC",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -335,6 +425,21 @@
 				{
 					"name": "Obtener cliente por ID",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -363,6 +468,21 @@
 				{
 					"name": "Eliminar cliente",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -391,6 +511,21 @@
 				{
 					"name": "LIsta Paginada",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -429,6 +564,21 @@
 				{
 					"name": "Editar cliente",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -486,6 +636,21 @@
 				{
 					"name": "Códigos postales",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -517,6 +682,21 @@
 				{
 					"name": "Códigos RelationTypes",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -542,6 +722,21 @@
 				{
 					"name": "Catalogo de país",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -567,6 +762,21 @@
 				{
 					"name": "Catalogo de Estados",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -598,6 +808,21 @@
 				{
 					"name": "Catalogo de Municipios",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -629,6 +854,67 @@
 				{
 					"name": "Catalogo de Localidades",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/catalogs/localities?stateCode=MEX",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"catalogs",
+								"localities"
+							],
+							"query": [
+								{
+									"key": "stateCode",
+									"value": "MEX"
+								}
+							]
+						},
+						"description": "Listado de paises válidos"
+					},
+					"response": []
+				},
+				{
+					"name": "Catalogo de Colonia",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -660,6 +946,21 @@
 				{
 					"name": "Catálogo de Usos de Cfdi",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -685,6 +986,21 @@
 				{
 					"name": "Catálogo de unidades",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -716,6 +1032,21 @@
 				{
 					"name": "Códigos de productos o servicios",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -747,6 +1078,21 @@
 				{
 					"name": "Catálogo de nombres",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -772,6 +1118,21 @@
 				{
 					"name": "Catálogo de monedas",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -802,6 +1163,21 @@
 				{
 					"name": "Catálogo de bancos",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -826,6 +1202,21 @@
 				{
 					"name": "Catálogo de formas de pago",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -850,6 +1241,21 @@
 				{
 					"name": "Catálogo de métodos de pago",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -874,6 +1280,21 @@
 				{
 					"name": "Catálogo de régimenes fiscales",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -898,6 +1319,21 @@
 				{
 					"name": "Catálogo de tipos de Cfdi",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -926,6 +1362,21 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -970,6 +1421,21 @@
 				{
 					"name": "Agregrar producto o servicio",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1002,6 +1468,21 @@
 				{
 					"name": "Eliminar producto o servicio",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -1030,6 +1511,21 @@
 				{
 					"name": "Obtener producto",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1054,6 +1550,21 @@
 				{
 					"name": "Lista de productos",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1078,6 +1589,21 @@
 				{
 					"name": "Lista de productos paginado",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1116,6 +1642,21 @@
 				{
 					"name": "Editar producto o servicio",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -1156,6 +1697,21 @@
 						{
 							"name": "Lista de sucursales",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -1181,6 +1737,21 @@
 						{
 							"name": "Agregar sucursal",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -1195,7 +1766,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"Name\": \"El sauce\",\r\n  \"Description\": \"Sucursal del sauce, enfocada en la distribución de agua en garrafón\",\r\n  \"Address\": {\r\n    \"Street\": \"Av. del Sauce\",\r\n    \"ExteriorNumber\": \"120\",\r\n    \"InteriorNumber\": \"\",\r\n    \"Neighborhood\": \"Las Flores\",\r\n    \"ZipCode\": \"78116\",\r\n    \"Locality\": \"\",\r\n    \"Municipality\": \"San Luis Potosi\",\r\n    \"State\": \"San Luis Potosi\",\r\n    \"Country\": \"México\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"Name\": \"El sauce\",\r\n  \"Description\": \"Sucursal del sauce, enfocada en la distribución de agua en garrafón\",\r\n  \"Address\": {\r\n    \"Street\": \"Av. del Sauce\",\r\n    \"ExteriorNumber\": \"120\",\r\n    \"InteriorNumber\": \"\",\r\n    \"Neighborhood\": \"Las Flores\",\r\n    \"ZipCode\": \"78116\",\r\n    \"Locality\": \"Localidad\",\r\n    \"Municipality\": \"San Luis Potosi\",\r\n    \"State\": \"San Luis Potosi\",\r\n    \"Country\": \"México\"\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "{{SERVER}}/api/BranchOffice",
@@ -1223,7 +1794,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"Id\":\"KI2C2GeiviBPKVZRxX6GLg2\",\r\n  \"Name\": \"El sauce\",\r\n  \"Description\": \"Sucursal del sauce, enfocada en la distribución de agua en garrafón\",\r\n  \"Address\": {\r\n    \"Street\": \"Av. del Sauce\",\r\n    \"ExteriorNumber\": \"120\",\r\n    \"InteriorNumber\": \"\",\r\n    \"Neighborhood\": \"Las Flores\",\r\n    \"ZipCode\": \"78116\",\r\n    \"Locality\": \"\",\r\n    \"Municipality\": \"San Luis Potosi\",\r\n    \"State\": \"San Luis Potosi\",\r\n    \"Country\": \"México\"\r\n  }\r\n}",
+									"raw": "{\r\n  \"Id\":\"KI2C2GeiviBPKVZRxX6GLg2\",\r\n  \"Name\": \"El sauce\",\r\n  \"Description\": \"Sucursal del sauce, enfocada en la distribución de agua en garrafón\",\r\n  \"Address\": {\r\n    \"Street\": \"Av. del Sauce\",\r\n    \"ExteriorNumber\": \"120\",\r\n    \"InteriorNumber\": \"\",\r\n    \"Neighborhood\": \"Las Flores\",\r\n    \"ZipCode\": \"78116\",\r\n    \"Locality\": \"Localidad\",\r\n    \"Municipality\": \"San Luis Potosi\",\r\n    \"State\": \"San Luis Potosi\",\r\n    \"Country\": \"México\"\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1253,6 +1824,21 @@
 						{
 							"name": "Lista de series",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -1359,7 +1945,7 @@
 									],
 									"cookie": [
 										{
-											"expires": "Mon Jan 18 2038 21:14:07 GMT-0600 (GMT-06:00)",
+											"expires": "Invalid Date",
 											"httpOnly": true,
 											"domain": "apisandbox.facturama.com.mx",
 											"path": "/",
@@ -1375,6 +1961,21 @@
 						{
 							"name": "Agregar serie",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -1409,6 +2010,21 @@
 						{
 							"name": "Eliminar Serie",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "DELETE",
 								"header": [
 									{
@@ -1446,6 +2062,21 @@
 						{
 							"name": "Carga de certificados CSD",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "PUT",
 								"header": [
 									{
@@ -1456,7 +2087,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "    {\r\n        \"Certificate\": \"MIIFsDCCA5igAwIBAgIUMzAwMDEwMDAwMDA1MDAwMDM0MTYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWxpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMjMwNTE4MTE0MzUxWhcNMjcwNTE4MTE0MzUxWjCB1zEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gVkFEQTgwMDkyN0RKMzEeMBwGA1UEBRMVIC8gVkFEQTgwMDkyN0hTUlNSTDA1MRMwEQYDVQQLEwpTdWN1cnNhbCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtmecO6n2GS0zL025gbHGQVxznPDICoXzR2uUngz4DqxVUC/w9cE6FxSiXm2ap8Gcjg7wmcZfm85EBaxCx/0J2u5CqnhzIoGCdhBPuhWQnIh5TLgj/X6uNquwZkKChbNe9aeFirU/JbyN7Egia9oKH9KZUsodiM/pWAH00PCtoKJ9OBcSHMq8Rqa3KKoBcfkg1ZrgueffwRLws9yOcRWLb02sDOPzGIm/jEFicVYt2Hw1qdRE5xmTZ7AGG0UHs+unkGjpCVeJ+BEBn0JPLWVvDKHZAQMj6s5Bku35+d/MyATkpOPsGT/VTnsouxekDfikJD1f7A1ZpJbqDpkJnss3vQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAFaUgj5PqgvJigNMgtrdXZnbPfVBbukAbW4OGnUhNrA7SRAAfv2BSGk16PI0nBOr7qF2mItmBnjgEwk+DTv8Zr7w5qp7vleC6dIsZFNJoa6ZndrE/f7KO1CYruLXr5gwEkIyGfJ9NwyIagvHHMszzyHiSZIA850fWtbqtythpAliJ2jF35M5pNS+YTkRB+T6L/c6m00ymN3q9lT1rB03YywxrLreRSFZOSrbwWfg34EJbHfbFXpCSVYdJRfiVdvHnewN0r5fUlPtR9stQHyuqewzdkyb5jTTw02D2cUfL57vlPStBj7SEi3uOWvLrsiDnnCIxRMYJ2UA2ktDKHk+zWnsDmaeleSzonv2CHW42yXYPCvWi88oE1DJNYLNkIjua7MxAnkNZbScNw01A6zbLsZ3y8G6eEYnxSTRfwjd8EP4kdiHNJftm7Z4iRU7HOVh79/lRWB+gd171s3d/mI9kte3MRy6V8MMEMCAnMboGpaooYwgAmwclI2XZCczNWXfhaWe0ZS5PmytD/GDpXzkX0oEgY9K/uYo5V77NdZbGAjmyi8cE2B2ogvyaN2XfIInrZPgEffJ4AB7kFA2mwesdLOCh0BLD9itmCve3A1FGR4+stO2ANUoiI3w3Tv2yQSg4bjeDlJ08lXaaFCLW2peEXMXjQUk7fmpb5MNuOUTW6BE=\",\r\n        \"PrivateKey\": \"MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIAgEAAoIBAQACAggAMBQGCCqGSIb3DQMHBAgwggS/AgEAMASCBMh4EHl7aNSCaMDA1VlRoXCZ5UUmqErAbucoZQObOaLUEm+I+QZ7Y8Giupo+F1XWkLvAsdk/uZlJcTfKLJyJbJwsQYbSpLOCLataZ4O5MVnnmMbfG//NKJn9kSMvJQZhSwAwoGLYDm1ESGezrvZabgFJnoQv8Si1nAhVGTk9FkFBesxRzq07dmZYwFCnFSX4xt2fDHs1PMpQbeq83aL/PzLCce3kxbYSB5kQlzGtUYayiYXcu0cVRu228VwBLCD+2wTDDoCmRXtPesgrLKUR4WWWb5N2AqAU1mNDC+UEYsENAerOFXWnmwrcTAu5qyZ7GsBMTpipW4Dbou2yqQ0lpA/aB06n1kz1aL6mNqGPaJ+OqoFuc8Ugdhadd+MmjHfFzoI20SZ3b2geCsUMNCsAd6oXMsZdWm8lzjqCGWHFeol0ik/xHMQvuQkkeCsQ28PBxdnUgf7ZGer+TN+2ZLd2kvTBOk6pIVgy5yC6cZ+o1Tloql9hYGa6rT3xcMbXlW+9e5jM2MWXZliVW3ZhaPjptJFDbIfWxJPjz4QvKyJk0zok4muv13Iiwj2bCyefUTRz6psqI4cGaYm9JpscKO2RCJN8UluYGbbWmYQU+Int6LtZj/lv8p6xnVjWxYI+rBPdtkpfFYRp+MJiXjgPw5B6UGuoruv7+vHjOLHOotRo+RdjZt7NqL9dAJnl1Qb2jfW6+d7NYQSI/bAwxO0sk4taQIT6Gsu/8kfZOPC2xk9rphGqCSS/4q3Os0MMjA1bcJLyoWLp13pqhK6bmiiHw0BBXH4fbEp4xjSbpPx4tHXzbdn8oDsHKZkWh3pPC2J/nVl0k/yF1KDVowVtMDXE47k6TGVcBoqe8PDXCG9+vjRpzIidqNo5qebaUZu6riWMWzldz8x3Z/jLWXuDiM7/Yscn0Z2GIlfoeyz+GwP2eTdOw9EUedHjEQuJY32bq8LICimJ4Ht+zMJKUyhwVQyAER8byzQBwTYmYP5U0wdsyIFitphw+/IH8+v08Ia1iBLPQAeAvRfTTIFLCs8foyUrj5Zv2B/wTYIZy6ioUM+qADeXyo45uBLLqkN90Rf6kiTqDld78NxwsfyR5MxtJLVDFkmf2IMMJHTqSfhbi+7QJaC11OOUJTD0v9wo0X/oO5GvZhe0ZaGHnm9zqTopALuFEAxcaQlc4R81wjC4wrIrqWnbcl2dxiBtD73KW+wcC9ymsLf4I8BEmiN25lx/OUc1IHNyXZJYSFkEfaxCEZWKcnbiyf5sqFSSlEqZLc4lUPJFAoP6s1FHVcyO0odWqdadhRZLZC9RCzQgPlMRtji/OXy5phh7diOBZv5UYp5nb+MZ2NAB/eFXm2JLguxjvEstuvTDmZDUb6Uqv++RdhO5gvKf/AcwU38ifaHQ9uvRuDocYwVxZS2nr9rOwZ8nAh+P2o4e0tEXjxFKQGhxXYkn75H3hhfnFYjik/2qunHBBZfcdG148MaNP6DjX33M238T9Zw/GyGx00JMogr2pdP4JAErv9a5yt4YR41KGf8guSOUbOXVARw6+ybh7+meb7w4BeTlj3aZkv8tVGdfIt3lrwVnlbzhLjeQY6PplKp3/a5Kr5yM0T4wJoKQQ6v3vSNmrhpbuAtKxpMILe8CQoo=\",\r\n        \"PrivateKeyPassword\": \"12345678a\"\r\n    }",
+									"raw": "    {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n    \"Certificate\": \"MIIFsDCCA5igAwIBAgIUMzAwMDEwMDAwMDA1MDAwMDM0MTYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWxpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMjMwNTE4MTE0MzUxWhcNMjcwNTE4MTE0MzUxWjCB1zEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gVkFEQTgwMDkyN0RKMzEeMBwGA1UEBRMVIC8gVkFEQTgwMDkyN0hTUlNSTDA1MRMwEQYDVQQLEwpTdWN1cnNhbCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtmecO6n2GS0zL025gbHGQVxznPDICoXzR2uUngz4DqxVUC/w9cE6FxSiXm2ap8Gcjg7wmcZfm85EBaxCx/0J2u5CqnhzIoGCdhBPuhWQnIh5TLgj/X6uNquwZkKChbNe9aeFirU/JbyN7Egia9oKH9KZUsodiM/pWAH00PCtoKJ9OBcSHMq8Rqa3KKoBcfkg1ZrgueffwRLws9yOcRWLb02sDOPzGIm/jEFicVYt2Hw1qdRE5xmTZ7AGG0UHs+unkGjpCVeJ+BEBn0JPLWVvDKHZAQMj6s5Bku35+d/MyATkpOPsGT/VTnsouxekDfikJD1f7A1ZpJbqDpkJnss3vQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAFaUgj5PqgvJigNMgtrdXZnbPfVBbukAbW4OGnUhNrA7SRAAfv2BSGk16PI0nBOr7qF2mItmBnjgEwk+DTv8Zr7w5qp7vleC6dIsZFNJoa6ZndrE/f7KO1CYruLXr5gwEkIyGfJ9NwyIagvHHMszzyHiSZIA850fWtbqtythpAliJ2jF35M5pNS+YTkRB+T6L/c6m00ymN3q9lT1rB03YywxrLreRSFZOSrbwWfg34EJbHfbFXpCSVYdJRfiVdvHnewN0r5fUlPtR9stQHyuqewzdkyb5jTTw02D2cUfL57vlPStBj7SEi3uOWvLrsiDnnCIxRMYJ2UA2ktDKHk+zWnsDmaeleSzonv2CHW42yXYPCvWi88oE1DJNYLNkIjua7MxAnkNZbScNw01A6zbLsZ3y8G6eEYnxSTRfwjd8EP4kdiHNJftm7Z4iRU7HOVh79/lRWB+gd171s3d/mI9kte3MRy6V8MMEMCAnMboGpaooYwgAmwclI2XZCczNWXfhaWe0ZS5PmytD/GDpXzkX0oEgY9K/uYo5V77NdZbGAjmyi8cE2B2ogvyaN2XfIInrZPgEffJ4AB7kFA2mwesdLOCh0BLD9itmCve3A1FGR4+stO2ANUoiI3w3Tv2yQSg4bjeDlJ08lXaaFCLW2peEXMXjQUk7fmpb5MNuOUTW6BE=\",\r\n    \"PrivateKey\": \"MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIAgEAAoIBAQACAggAMBQGCCqGSIb3DQMHBAgwggS/AgEAMASCBMh4EHl7aNSCaMDA1VlRoXCZ5UUmqErAbucoZQObOaLUEm+I+QZ7Y8Giupo+F1XWkLvAsdk/uZlJcTfKLJyJbJwsQYbSpLOCLataZ4O5MVnnmMbfG//NKJn9kSMvJQZhSwAwoGLYDm1ESGezrvZabgFJnoQv8Si1nAhVGTk9FkFBesxRzq07dmZYwFCnFSX4xt2fDHs1PMpQbeq83aL/PzLCce3kxbYSB5kQlzGtUYayiYXcu0cVRu228VwBLCD+2wTDDoCmRXtPesgrLKUR4WWWb5N2AqAU1mNDC+UEYsENAerOFXWnmwrcTAu5qyZ7GsBMTpipW4Dbou2yqQ0lpA/aB06n1kz1aL6mNqGPaJ+OqoFuc8Ugdhadd+MmjHfFzoI20SZ3b2geCsUMNCsAd6oXMsZdWm8lzjqCGWHFeol0ik/xHMQvuQkkeCsQ28PBxdnUgf7ZGer+TN+2ZLd2kvTBOk6pIVgy5yC6cZ+o1Tloql9hYGa6rT3xcMbXlW+9e5jM2MWXZliVW3ZhaPjptJFDbIfWxJPjz4QvKyJk0zok4muv13Iiwj2bCyefUTRz6psqI4cGaYm9JpscKO2RCJN8UluYGbbWmYQU+Int6LtZj/lv8p6xnVjWxYI+rBPdtkpfFYRp+MJiXjgPw5B6UGuoruv7+vHjOLHOotRo+RdjZt7NqL9dAJnl1Qb2jfW6+d7NYQSI/bAwxO0sk4taQIT6Gsu/8kfZOPC2xk9rphGqCSS/4q3Os0MMjA1bcJLyoWLp13pqhK6bmiiHw0BBXH4fbEp4xjSbpPx4tHXzbdn8oDsHKZkWh3pPC2J/nVl0k/yF1KDVowVtMDXE47k6TGVcBoqe8PDXCG9+vjRpzIidqNo5qebaUZu6riWMWzldz8x3Z/jLWXuDiM7/Yscn0Z2GIlfoeyz+GwP2eTdOw9EUedHjEQuJY32bq8LICimJ4Ht+zMJKUyhwVQyAER8byzQBwTYmYP5U0wdsyIFitphw+/IH8+v08Ia1iBLPQAeAvRfTTIFLCs8foyUrj5Zv2B/wTYIZy6ioUM+qADeXyo45uBLLqkN90Rf6kiTqDld78NxwsfyR5MxtJLVDFkmf2IMMJHTqSfhbi+7QJaC11OOUJTD0v9wo0X/oO5GvZhe0ZaGHnm9zqTopALuFEAxcaQlc4R81wjC4wrIrqWnbcl2dxiBtD73KW+wcC9ymsLf4I8BEmiN25lx/OUc1IHNyXZJYSFkEfaxCEZWKcnbiyf5sqFSSlEqZLc4lUPJFAoP6s1FHVcyO0odWqdadhRZLZC9RCzQgPlMRtji/OXy5phh7diOBZv5UYp5nb+MZ2NAB/eFXm2JLguxjvEstuvTDmZDUb6Uqv++RdhO5gvKf/AcwU38ifaHQ9uvRuDocYwVxZS2nr9rOwZ8nAh+P2o4e0tEXjxFKQGhxXYkn75H3hhfnFYjik/2qunHBBZfcdG148MaNP6DjX33M238T9Zw/GyGx00JMogr2pdP4JAErv9a5yt4YR41KGf8guSOUbOXVARw6+ybh7+meb7w4BeTlj3aZkv8tVGdfIt3lrwVnlbzhLjeQY6PplKp3/a5Kr5yM0T4wJoKQQ6v3vSNmrhpbuAtKxpMILe8CQoo=\",\r\n    \"PrivateKeyPassword\": \"12345678a\"\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1479,6 +2110,21 @@
 						{
 							"name": "Carga de certificados FIEL",
 							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{Password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{UserName}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "PUT",
 								"header": [
 									{
@@ -1514,6 +2160,21 @@
 				{
 					"name": "Suscripción ",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1538,6 +2199,21 @@
 				{
 					"name": "TaxEntityInfo",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1561,6 +2237,21 @@
 				{
 					"name": "Datos de Facturacion de mi cuenta",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1585,6 +2276,21 @@
 				{
 					"name": "UpdateTaxInfo",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -1617,6 +2323,21 @@
 				{
 					"name": "Upload Logo",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -1655,6 +2376,21 @@
 				{
 					"name": "Complemento de donativos",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1671,7 +2407,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"9\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"1\",\r\n    \"Serie\": \"DONST\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"DONATIVO\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Complemento\": {\r\n        \"Donation\": {\r\n            \"AuthorizationDate\": \"30/01/2019\",\r\n            \"AuthorizationNumber\": \"B400-05-08-2014-005\",\r\n            \"Legend\": \"El comprobante es un donativo\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"Description\": \"Cobija de lana y algodon\",\r\n            \"ProductCode\": \"20102000\",\r\n            \"IdentificationNumber\": \"FP114\",\r\n            \"Quantity\": \"3\",\r\n            \"Subtotal\": \"3000\",\r\n            \"Total\": \"3000\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"EA\",\r\n            \"UnitPrice\": \"1000\",\r\n            \"TaxObject\": \"01\"\r\n        }\r\n    ],\r\n    \"Receiver\": {\r\n        \"Rfc\": \"CACX7605101P8\",\r\n        \"CfdiUse\": \"D04\",\r\n        \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n        \"FiscalRegime\": \"605\",\r\n        \"TaxZipCode\": \"10740\"\r\n    }\r\n}"
+							"raw": "{\r\n    \"NameId\": \"9\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"1\",\r\n    \"Serie\": \"DONST\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"DONATIVO\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Complemento\": {\r\n        \"Donation\": {\r\n            \"AuthorizationDate\": \"30/01/2019\",\r\n            \"AuthorizationNumber\": \"B400-05-08-2014-005\",\r\n            \"Legend\": \"El comprobante es un donativo\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"Description\": \"Cobija de lana y algodon\",\r\n            \"ProductCode\": \"20102000\",\r\n            \"IdentificationNumber\": \"FP114\",\r\n            \"Quantity\": \"3\",\r\n            \"Subtotal\": \"3000\",\r\n            \"Total\": \"3000\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"EA\",\r\n            \"UnitPrice\": \"1000\",\r\n            \"TaxObject\": \"01\"\r\n        }\r\n    ],\r\n    \"Receiver\": {\r\n        \"Rfc\": \"CACX7605101P8\",\r\n        \"CfdiUse\": \"D04\",\r\n        \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n        \"FiscalRegime\": \"605\",\r\n        \"TaxZipCode\": \"36257\"\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -1689,6 +2425,21 @@
 				{
 					"name": "Complemento concepto por cuenta de terceros",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1705,7 +2456,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"1\",\r\n    \"Serie\": \"FAC\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"Por cuenta de terceros\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G03\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\",\r\n        \"TaxResidence\": \"MEX\",\r\n        \"Address\": {\r\n            \"Street\": \"Guadalcazar del receptor\",\r\n            \"ExteriorNumber\": \"300\",\r\n            \"InteriorNumber\": \"A\",\r\n            \"Neighborhood\": \"Las lomas\",\r\n            \"ZipCode\": \"65000\",\r\n            \"Municipality\": \"San Luis Potosi\",\r\n            \"State\": \"San Luis Potosi\",\r\n            \"Country\": \"México\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"25173108\",\r\n            \"Description\": \"GPS estandar pruebas\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Quantity\": 1.0,\r\n            \"UnitPrice\": 100.0,\r\n            \"Subtotal\": 100.00,\r\n            \"TaxObject\": \"02\",\r\n            \"ThirdPartyAccount\": {\r\n                \"Rfc\": \"CACX7605101P8\",\r\n                \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n                \"FiscalRegime\": \"616\",\r\n                \"TaxZipCode\": \"10740\"\r\n            },\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"1\",\r\n    \"Serie\": \"FAC\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"Por cuenta de terceros\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G03\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\",\r\n        \"TaxResidence\": \"MEX\",\r\n        \"Address\": {\r\n            \"Street\": \"Guadalcazar del receptor\",\r\n            \"ExteriorNumber\": \"300\",\r\n            \"InteriorNumber\": \"A\",\r\n            \"Neighborhood\": \"Las lomas\",\r\n            \"ZipCode\": \"65000\",\r\n            \"Municipality\": \"San Luis Potosi\",\r\n            \"State\": \"San Luis Potosi\",\r\n            \"Country\": \"México\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"25173108\",\r\n            \"Description\": \"GPS estandar pruebas\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Quantity\": 1.0,\r\n            \"UnitPrice\": 100.0,\r\n            \"Subtotal\": 100.00,\r\n            \"TaxObject\": \"02\",\r\n            \"ThirdPartyAccount\": {\r\n                \"Rfc\": \"CACX7605101P8\",\r\n                \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n                \"FiscalRegime\": \"616\",\r\n                \"TaxZipCode\": \"36257\"\r\n            },\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -1723,6 +2474,21 @@
 				{
 					"name": "Complemento de pago",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1739,7 +2505,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"1\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"116\",\r\n                \"OperationNumber\": \"126456\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"e0be0e69-5760-4777-8608-7a07d2e9da56\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"Serie\": \"1111\",\r\n                        \"Folio\": \"45\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PPD\",\r\n                        \"PreviousBalanceAmount\": \"116\",\r\n                        \"AmountPaid\": \"111.75\",\r\n                        \"ImpSaldoInsoluto\": \"0\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Name\": \"IVA\",\r\n                                \"Rate\": \"0.16\",\r\n                                \"Total\": \"16\",\r\n                                \"Base\": \"100\",\r\n                                \"IsRetention\": \"false\"\r\n                            },\r\n                            {\r\n                                \"Name\": \"ISR\",\r\n                                \"Rate\": 0.0125,\r\n                                \"Total\": 1.25,\r\n                                \"Base\": 100.00,\r\n                                \"IsRetention\": true\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}"
+							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"1\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"116\",\r\n                \"OperationNumber\": \"126456\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"e0be0e69-5760-4777-8608-7a07d2e9da56\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"Serie\": \"1111\",\r\n                        \"Folio\": \"45\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PPD\",\r\n                        \"PreviousBalanceAmount\": \"116\",\r\n                        \"AmountPaid\": \"111.75\",\r\n                        \"ImpSaldoInsoluto\": \"0\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Name\": \"IVA\",\r\n                                \"Rate\": \"0.16\",\r\n                                \"Total\": \"16\",\r\n                                \"Base\": \"100\",\r\n                                \"IsRetention\": \"false\"\r\n                            },\r\n                            {\r\n                                \"Name\": \"ISR\",\r\n                                \"Rate\": 0.0125,\r\n                                \"Total\": 1.25,\r\n                                \"Base\": 100.00,\r\n                                \"IsRetention\": true\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -1757,6 +2523,21 @@
 				{
 					"name": "Complemento de pago Iva Excento",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1773,7 +2554,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"116\",\r\n                \"OperationNumber\": \"126456\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"11c9536f-6bd0-4a32-9339-f8a73a15b775\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"Serie\": \"1111\",\r\n                        \"Folio\": \"45\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PPD\",\r\n                        \"PreviousBalanceAmount\": \"116\",\r\n                        \"AmountPaid\": \"111.75\",\r\n                        \"ImpSaldoInsoluto\": \"0\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Name\": \"IVA Exento\",\r\n                                \"Rate\": 0,\r\n                                \"Total\": 0,\r\n                                \"Base\": 111.75,\r\n                                \"IsRetention\": \"false\"\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}"
+							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"116\",\r\n                \"OperationNumber\": \"126456\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"11c9536f-6bd0-4a32-9339-f8a73a15b775\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"Serie\": \"1111\",\r\n                        \"Folio\": \"45\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PPD\",\r\n                        \"PreviousBalanceAmount\": \"116\",\r\n                        \"AmountPaid\": \"111.75\",\r\n                        \"ImpSaldoInsoluto\": \"0\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Name\": \"IVA Exento\",\r\n                                \"Rate\": 0,\r\n                                \"Total\": 0,\r\n                                \"Base\": 111.75,\r\n                                \"IsRetention\": \"false\"\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -1791,6 +2572,21 @@
 				{
 					"name": "Complemento de pago Multiples Pagos",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1801,7 +2597,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"12040.82\",\r\n                \"Currency\": \"MXN\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"C94C8AF3-C774-4D4C-802S-781411934A6E\",\r\n                        \"Serie\": \"BQ\",\r\n                        \"Folio\": \"2205\",\r\n                        \"Currency\": \"USD\",\r\n                        \"EquivalenceDocRel\": 0.049,\r\n                        \"PaymentMethod\": \"PUE\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"PreviousBalanceAmount\": \"1160.00\",\r\n                        \"AmountPaid\": \"580.00\",\r\n                        \"ImpSaldoInsoluto\": \"580.00\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Total\": 80,\r\n                                \"Name\": \"IVA\",\r\n                                \"Base\": 500,\r\n                                \"Rate\": 0.160000,\r\n                                \"IsRetention\": false\r\n                            }\r\n                        ]\r\n                    },\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"C94C8AF3-C774-4D4C-803E-781411934A6F\",\r\n                        \"Serie\": \"BQ\",\r\n                        \"Folio\": \"2206\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PUE\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"PreviousBalanceAmount\": \"204.08\",\r\n                        \"AmountPaid\": \"204.08\",\r\n                        \"ImpSaldoInsoluto\": \"0.00\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Total\": 1.60,\r\n                                \"Name\": \"IVA\",\r\n                                \"Base\": 10,\r\n                                \"Rate\": 0.160000,\r\n                                \"IsRetention\": false\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"NameId\": \"14\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"COP\",\r\n    \"CfdiType\": \"P\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-18T12:55:02-06:00\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Complemento\": {\r\n        \"Payments\": [\r\n            {\r\n                \"Date\": \"2018-10-04\",\r\n                \"PaymentForm\": \"03\",\r\n                \"Amount\": \"12040.82\",\r\n                \"Currency\": \"MXN\",\r\n                \"RelatedDocuments\": [\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"C94C8AF3-C774-4D4C-802S-781411934A6E\",\r\n                        \"Serie\": \"BQ\",\r\n                        \"Folio\": \"2205\",\r\n                        \"Currency\": \"USD\",\r\n                        \"EquivalenceDocRel\": 0.049,\r\n                        \"PaymentMethod\": \"PUE\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"PreviousBalanceAmount\": \"1160.00\",\r\n                        \"AmountPaid\": \"580.00\",\r\n                        \"ImpSaldoInsoluto\": \"580.00\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Total\": 80,\r\n                                \"Name\": \"IVA\",\r\n                                \"Base\": 500,\r\n                                \"Rate\": 0.160000,\r\n                                \"IsRetention\": false\r\n                            }\r\n                        ]\r\n                    },\r\n                    {\r\n                        \"TaxObject\": \"02\",\r\n                        \"Uuid\": \"C94C8AF3-C774-4D4C-803E-781411934A6F\",\r\n                        \"Serie\": \"BQ\",\r\n                        \"Folio\": \"2206\",\r\n                        \"Currency\": \"MXN\",\r\n                        \"PaymentMethod\": \"PUE\",\r\n                        \"PartialityNumber\": \"1\",\r\n                        \"PreviousBalanceAmount\": \"204.08\",\r\n                        \"AmountPaid\": \"204.08\",\r\n                        \"ImpSaldoInsoluto\": \"0.00\",\r\n                        \"Taxes\": [\r\n                            {\r\n                                \"Total\": 1.60,\r\n                                \"Name\": \"IVA\",\r\n                                \"Base\": 10,\r\n                                \"Rate\": 0.160000,\r\n                                \"IsRetention\": false\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1824,6 +2620,21 @@
 				{
 					"name": "INE",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1857,6 +2668,21 @@
 				{
 					"name": "INE V2",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1890,6 +2716,21 @@
 				{
 					"name": "Complemento carta Porte 2.0",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1928,6 +2769,21 @@
 				{
 					"name": "Detalle de Cfdi",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1979,6 +2835,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2026,6 +2897,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2053,6 +2939,21 @@
 				{
 					"name": "Cfdis filtrados por palabra clave",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2090,6 +2991,21 @@
 				{
 					"name": "Cfdis filtrados por Rfc",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2127,6 +3043,21 @@
 				{
 					"name": "Cfdis filtrado completo",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2216,6 +3147,21 @@
 				{
 					"name": "CFDI Status SAT",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2259,6 +3205,21 @@
 				{
 					"name": "Descargar Acuce ",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2285,6 +3246,21 @@
 				{
 					"name": "Validar RFC",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2295,7 +3271,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"ZipCode\":\"26015\",\r\n        \"FiscalRegime\": \"601\"        \r\n    }",
+							"raw": "{\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"ZipCode\":\"42501\",\r\n        \"FiscalRegime\": \"601\"        \r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2334,6 +3310,21 @@
 						}
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2378,6 +3369,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2422,6 +3428,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2436,7 +3457,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n  \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"65000\"\r\n    },\r\n  \"Items\": [\r\n    {\r\n      \"ProductCode\": \"10101504\",\r\n      \"IdentificationNumber\": \"EDL\",\r\n      \"Description\": \"Estudios de laboratorio\",\r\n      \"Unit\": \"NO APLICA\",\r\n      \"UnitCode\": \"MTS\",\r\n      \"UnitPrice\": 50,\r\n      \"Quantity\": 2.0,\r\n      \"Subtotal\": 100,\r\n      \"TaxObject\":\"02\",\r\n      \"Taxes\": [\r\n        {\r\n          \"Total\": 16,\r\n          \"Name\": \"IVA\",\r\n          \"Base\": 100,\r\n          \"Rate\": 0.16,\r\n          \"IsRetention\": false\r\n        }\r\n      ],\r\n      \"Total\": 116,\r\n      \"ThirdPartyAccount\":{\r\n            \"Rfc\":\"CACX7605101P8\",\r\n            \"Name\":\"XOCHILT CASAS CHAVEZ\",\r\n            \"FiscalRegime\":\"616\",\r\n            \"TaxZipCode\":\"10740\"\r\n        }\r\n    },\r\n    {\r\n      \"ProductCode\": \"10101504\",\r\n      \"IdentificationNumber\": \"001\",\r\n      \"Description\": \"SERVICIO DE COLOCACION\",\r\n      \"Unit\": \"NO APLICA\",\r\n      \"UnitCode\": \"E49\",\r\n      \"UnitPrice\": 100.0,\r\n      \"Quantity\": 15.0,\r\n      \"Subtotal\": 1500.0,\r\n      \"Discount\": 0.0,\r\n      \"TaxObject\":\"02\",\r\n      \"Taxes\": [\r\n        {\r\n          \"Total\": 240.0,\r\n          \"Name\": \"IVA\",\r\n          \"Base\": 1500.0,\r\n          \"Rate\": 0.16,\r\n          \"IsRetention\": false\r\n        }\r\n      ],\r\n      \"Total\": 1740.0\r\n    }\r\n  ]\r\n}"
+							"raw": "{\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n  \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"86991\"\r\n    },\r\n  \"Items\": [\r\n    {\r\n      \"ProductCode\": \"10101504\",\r\n      \"IdentificationNumber\": \"EDL\",\r\n      \"Description\": \"Estudios de laboratorio\",\r\n      \"Unit\": \"NO APLICA\",\r\n      \"UnitCode\": \"MTS\",\r\n      \"UnitPrice\": 50,\r\n      \"Quantity\": 2.0,\r\n      \"Subtotal\": 100,\r\n      \"TaxObject\":\"02\",\r\n      \"Taxes\": [\r\n        {\r\n          \"Total\": 16,\r\n          \"Name\": \"IVA\",\r\n          \"Base\": 100,\r\n          \"Rate\": 0.16,\r\n          \"IsRetention\": false\r\n        }\r\n      ],\r\n      \"Total\": 116,\r\n      \"ThirdPartyAccount\":{\r\n            \"Rfc\":\"CACX7605101P8\",\r\n            \"Name\":\"XOCHILT CASAS CHAVEZ\",\r\n            \"FiscalRegime\":\"616\",\r\n            \"TaxZipCode\":\"36257\"\r\n        }\r\n    },\r\n    {\r\n      \"ProductCode\": \"10101504\",\r\n      \"IdentificationNumber\": \"001\",\r\n      \"Description\": \"SERVICIO DE COLOCACION\",\r\n      \"Unit\": \"NO APLICA\",\r\n      \"UnitCode\": \"E49\",\r\n      \"UnitPrice\": 100.0,\r\n      \"Quantity\": 15.0,\r\n      \"Subtotal\": 1500.0,\r\n      \"Discount\": 0.0,\r\n      \"TaxObject\":\"02\",\r\n      \"Taxes\": [\r\n        {\r\n          \"Total\": 240.0,\r\n          \"Name\": \"IVA\",\r\n          \"Base\": 1500.0,\r\n          \"Rate\": 0.16,\r\n          \"IsRetention\": false\r\n        }\r\n      ],\r\n      \"Total\": 1740.0\r\n    }\r\n  ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -2466,6 +3487,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2480,7 +3516,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116,\r\n            \"NumerosPedimento\": [\r\n                \"21  47  3807  8003832\",\r\n                \"21  47  3807  8003832\"\r\n            ]\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116,\r\n            \"NumerosPedimento\": [\r\n                \"21  47  3807  8003832\",\r\n                \"21  47  3807  8003832\"\r\n            ]\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -2510,6 +3546,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2524,7 +3575,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116,\r\n            \"PropertyTaxIDNumber\": [\r\n                \"123456789\"\r\n            ]\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116,\r\n            \"PropertyTaxIDNumber\": [\r\n                \"123456789\"\r\n            ]\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -2554,6 +3605,21 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2587,6 +3653,21 @@
 				{
 					"name": "Enviar Cfdi por email",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2648,6 +3729,21 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2662,7 +3758,69 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{SERVER}}/3/cfdis",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"3",
+								"cfdis"
+							]
+						},
+						"description": "Ceación / Emisión"
+					},
+					"response": []
+				},
+				{
+					"name": "CFDi Arrendamiento",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NameId\": \"10\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"#RNT2023\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CFDI de Arrendamiento\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"80131500\",\r\n            \"IdentificationNumber\": \"Renta2023\",\r\n            \"Description\": \"renta Mensual\",\r\n            \"Unit\": \"Unidad de servicio\",\r\n            \"UnitCode\": \"E48\",\r\n            \"UnitPrice\": 1500,\r\n            \"Quantity\": 1.0,\r\n            \"Subtotal\": 1500,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.00,\r\n            \"PropertyTaxIDNumber\": [\r\n                \"123456789\"\r\n            ]\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -2695,6 +3853,21 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2709,7 +3882,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"Quantity\": \"1\",\r\n            \"ProductCode\": \"50181901\",\r\n            \"UnitCode\": \"H87\",\r\n            \"Unit\": \"Pieza\",\r\n            \"Description\": \"Ejemplo de producto alto en calorias con IEPS de 8% e IVA de 16%\",\r\n            \"IdentificationNumber\": \"1000123\",\r\n            \"UnitPrice\": \"54.31\",\r\n            \"Subtotal\": \"54.31\",\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Name\": \"IVA\",\r\n                    \"Rate\": \"0.16\",\r\n                    \"Total\": \"8.68\",\r\n                    \"Base\": \"54.31\",\r\n                    \"IsRetention\": \"false\",\r\n                    \"IsFederalTax\": \"true\"\r\n                },\r\n                {\r\n                    \"Name\": \"IEPS\",\r\n                    \"Rate\": \"0.08\",\r\n                    \"Total\": \"8\",\r\n                    \"Base\": \"100\",\r\n                    \"IsRetention\": \"false\",\r\n                    \"IsFederalTax\": \"true\",\r\n                    \"IsQuota\": \"false\"\r\n                }\r\n            ],\r\n            \"Total\": \"125.28\"\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"Quantity\": \"1\",\r\n            \"ProductCode\": \"50181901\",\r\n            \"UnitCode\": \"H87\",\r\n            \"Unit\": \"Pieza\",\r\n            \"Description\": \"Ejemplo de producto alto en calorias con IEPS de 8% e IVA de 16%\",\r\n            \"IdentificationNumber\": \"1000123\",\r\n            \"UnitPrice\": \"54.31\",\r\n            \"Subtotal\": \"54.31\",\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Name\": \"IVA\",\r\n                    \"Rate\": \"0.16\",\r\n                    \"Total\": \"8.68\",\r\n                    \"Base\": \"54.31\",\r\n                    \"IsRetention\": \"false\",\r\n                    \"IsFederalTax\": \"true\"\r\n                },\r\n                {\r\n                    \"Name\": \"IEPS\",\r\n                    \"Rate\": \"0.08\",\r\n                    \"Total\": \"8\",\r\n                    \"Base\": \"100\",\r\n                    \"IsRetention\": \"false\",\r\n                    \"IsFederalTax\": \"true\",\r\n                    \"IsQuota\": \"false\"\r\n                }\r\n            ],\r\n            \"Total\": \"125.28\"\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -2742,6 +3915,21 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2756,7 +3944,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"Exportation\": \"01\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"CurrencyExchangeRate\": 20.55,\r\n    \"Currency\": \"USD\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"Exportation\": \"01\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"CurrencyExchangeRate\": 20.55,\r\n    \"Currency\": \"USD\",\r\n    \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -2789,6 +3977,21 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2841,6 +4044,21 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2855,7 +4073,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [{\r\n\t\t\t    \"Name\": \"IVA Exento\",\r\n\t\t\t    \"Rate\": 0.0,\r\n\t\t\t    \"Total\": 0.0,\r\n\t\t\t    \"Base\": 100,\r\n\t\t\t    \"IsRetention\": \"false\",\r\n\t\t\t    \"IsFederalTax\": \"true\"\r\n\t\t    }],\r\n            \"Total\": 100.00\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [{\r\n\t\t\t    \"Name\": \"IVA Exento\",\r\n\t\t\t    \"Rate\": 0.0,\r\n\t\t\t    \"Total\": 0.0,\r\n\t\t\t    \"Base\": 100,\r\n\t\t\t    \"IsRetention\": \"false\",\r\n\t\t\t    \"IsFederalTax\": \"true\"\r\n\t\t    }],\r\n            \"Total\": 100.00\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -2893,6 +4111,21 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2907,7 +4140,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"2\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"NDC\",\r\n    \"CfdiType\": \"E\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"Nota de credito\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"CP01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"65000\"\r\n    },\r\n    \"Relations\": {\r\n\t\t\"Type\": \"07\",\r\n\t\t\"Cfdis\": [{\r\n\t\t\t\"Uuid\": \"45ab1a98-1709-446a-8759-e45a8d76b557\"\r\n\t\t}]\r\n\t},\r\n    \"Items\": [{\r\n\t\t\"Quantity\": \"1\",\r\n\t\t\"ProductCode\": \"86121500\",\r\n\t\t\"UnitCode\": \"E48\",\r\n\t\t\"Unit\": \"Unidad de servicio\",\r\n\t\t\"Description\": \"Pago inicial del 50% por el desarrollo del sitio web personal.\",\r\n\t\t\"IdentificationNumber\": \"980000\",\r\n\t\t\"UnitPrice\": \"500.00\",\r\n\t\t\"Subtotal\": \"500.00\",\r\n        \"TaxObject\":\"02\",\r\n\t\t\"Taxes\": [{\r\n\t\t\t\"Name\": \"IVA\",\r\n\t\t\t\"Rate\": \"0.16\",\r\n\t\t\t\"Total\": \"80\",\r\n\t\t\t\"Base\": \"500\",\r\n\t\t\t\"IsRetention\": \"false\",\r\n            \"IsFederalTax\": \"false\"\r\n\t\t\t\r\n\t\t}],\r\n\t\t\"Total\": \"580.00\"\r\n\t}]\r\n}"
+							"raw": "{\r\n    \"NameId\": \"2\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"NDC\",\r\n    \"CfdiType\": \"E\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-02-28T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"Nota de credito\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"Receiver\": \r\n    {\r\n      \"Rfc\": \"URE180429TM6\",\r\n      \"CfdiUse\": \"CP01\",\r\n      \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n      \"FiscalRegime\": \"601\",\r\n      \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Relations\": {\r\n\t\t\"Type\": \"07\",\r\n\t\t\"Cfdis\": [{\r\n\t\t\t\"Uuid\": \"45ab1a98-1709-446a-8759-e45a8d76b557\"\r\n\t\t}]\r\n\t},\r\n    \"Items\": [{\r\n\t\t\"Quantity\": \"1\",\r\n\t\t\"ProductCode\": \"86121500\",\r\n\t\t\"UnitCode\": \"E48\",\r\n\t\t\"Unit\": \"Unidad de servicio\",\r\n\t\t\"Description\": \"Pago inicial del 50% por el desarrollo del sitio web personal.\",\r\n\t\t\"IdentificationNumber\": \"980000\",\r\n\t\t\"UnitPrice\": \"500.00\",\r\n\t\t\"Subtotal\": \"500.00\",\r\n        \"TaxObject\":\"02\",\r\n\t\t\"Taxes\": [{\r\n\t\t\t\"Name\": \"IVA\",\r\n\t\t\t\"Rate\": \"0.16\",\r\n\t\t\t\"Total\": \"80\",\r\n\t\t\t\"Base\": \"500\",\r\n\t\t\t\"IsRetention\": \"false\",\r\n            \"IsFederalTax\": \"false\"\r\n\t\t\t\r\n\t\t}],\r\n\t\t\"Total\": \"580.00\"\r\n\t}]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/3/cfdis",
@@ -2926,6 +4159,21 @@
 				{
 					"name": "NotariosPublicos",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -2936,7 +4184,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \r\n    \"Receiver\": {\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"CfdiUse\": \"G01\",\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"26015\"\r\n    },\r\n    \"CfdiType\": \"I\",\r\n    \"NameId\": \"25\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Serie\": \"FA\",\r\n    \"PaymentForm\": \"01\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"Decimals\": \"2\",\r\n    \"Currency\": \"MXN\",\r\n    \"Exportation\": \"01\",\r\n    \"Complemento\": {\r\n        \"NotariosPublicos\": {\r\n            \"Version\": \"1.0\",\r\n            \"DatosOperacion\": {\r\n                \"NumInstrumentoNotarial\": \"1234\",\r\n                \"FechaInstNotarial\": \"14/05/2022\",\r\n                \"MontoOperacion\": \"10\",\r\n                \"Subtotal\": \"10\",\r\n                \"IVA\": \"1\"\r\n            },\r\n            \"DatosNotario\": {\r\n                \"CURP\": \"XEXX010101HNEXXXA4\",\r\n                \"NumNotaria\": \"12\",\r\n                \"EntidadFederativa\": \"24\",\r\n                \"Adscripcion\":\"\"\r\n            },\r\n            \"DescInmuebles\": [\r\n                {\r\n                    \"TipoInmueble\": \"01\",\r\n                    \"Calle\": \"calle\",\r\n                    \"Municipio\": \"slp\",\r\n                    \"Estado\": \"24\",\r\n                    \"Pais\": \"MEX\",\r\n                    \"CodigoPostal\": \"78000\"\r\n                }\r\n            ],\r\n            \"DatosEnajenante\": {\r\n                \"CoproSocConyugalE\": \"No\",\r\n                \"Item\": {\r\n                    \"Nombre\": \"juan\",\r\n                    \"ApellidoPaterno\": \"hernandez\",\r\n                    \"RFC\": \"KICR630120NX3\",\r\n                    \"CURP\": \"XEXX010101HNEXXXA4\"\r\n                }\r\n            },\r\n            \"DatosAdquiriente\": {\r\n                \"CoproSocConyugalE\": \"No\",\r\n                \"Item\": {\r\n                    \"Nombre\": \"juan\",\r\n                    \"ApellidoPaterno\": \"hernandez\",\r\n                    \"RFC\": \"KICR630120NX3\",\r\n                    \"CURP\": \"XEXX010101HNEXXXA4\"\r\n                }\r\n            }\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {            \r\n            \"Quantity\": \"1\",\r\n            \"ProductCode\": \"95101603\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Unit\": \"Unidad de servicio\",\r\n            \"Description\": \"sitio centro comercial\",\r\n            \"IdentificationNumber\": \"sitiocomercial\",\r\n            \"UnitPrice\": \"10.00\",\r\n            \"Subtotal\": \"10.00\",\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Name\": \"IVA\",\r\n                    \"Rate\": \"0.16\",\r\n                    \"Total\": \"1.6\",\r\n                    \"Base\": \"10\",\r\n                    \"IsRetention\": \"false\",\r\n                    \"IsFederalTax\": \"true\"\r\n                }\r\n            ],\r\n            \"Total\": \"11.60\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{    \r\n    \"Receiver\": {\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"CfdiUse\": \"G01\",\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"42501\"\r\n    },\r\n    \"CfdiType\": \"I\",\r\n    \"NameId\": \"25\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Serie\": \"FA\",\r\n    \"PaymentForm\": \"01\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"Decimals\": \"2\",\r\n    \"Currency\": \"MXN\",\r\n    \"Exportation\": \"01\",\r\n    \"Complemento\": {\r\n        \"NotariosPublicos\": {\r\n            \"Version\": \"1.0\",\r\n            \"DatosOperacion\": {\r\n                \"NumInstrumentoNotarial\": \"1234\",\r\n                \"FechaInstNotarial\": \"14/05/2022\",\r\n                \"MontoOperacion\": \"10\",\r\n                \"Subtotal\": \"10\",\r\n                \"IVA\": \"1\"\r\n            },\r\n            \"DatosNotario\": {\r\n                \"CURP\": \"XEXX010101HNEXXXA4\",\r\n                \"NumNotaria\": \"12\",\r\n                \"EntidadFederativa\": \"24\",\r\n                \"Adscripcion\":\"\"\r\n            },\r\n            \"DescInmuebles\": [\r\n                {\r\n                    \"TipoInmueble\": \"01\",\r\n                    \"Calle\": \"calle\",\r\n                    \"Municipio\": \"slp\",\r\n                    \"Estado\": \"24\",\r\n                    \"Pais\": \"MEX\",\r\n                    \"CodigoPostal\": \"78000\"\r\n                }\r\n            ],\r\n            \"DatosEnajenante\": {\r\n                \"CoproSocConyugalE\": \"No\",\r\n                \"Item\": {\r\n                    \"Nombre\": \"juan\",\r\n                    \"ApellidoPaterno\": \"hernandez\",\r\n                    \"RFC\": \"KICR630120NX3\",\r\n                    \"CURP\": \"XEXX010101HNEXXXA4\"\r\n                }\r\n            },\r\n            \"DatosAdquiriente\": {\r\n                \"CoproSocConyugalE\": \"No\",\r\n                \"Item\": {\r\n                    \"Nombre\": \"juan\",\r\n                    \"ApellidoPaterno\": \"hernandez\",\r\n                    \"RFC\": \"KICR630120NX3\",\r\n                    \"CURP\": \"XEXX010101HNEXXXA4\"\r\n                }\r\n            }\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {            \r\n            \"Quantity\": \"1\",\r\n            \"ProductCode\": \"95101603\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Unit\": \"Unidad de servicio\",\r\n            \"Description\": \"sitio centro comercial\",\r\n            \"IdentificationNumber\": \"sitiocomercial\",\r\n            \"UnitPrice\": \"10.00\",\r\n            \"Subtotal\": \"10.00\",\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Name\": \"IVA\",\r\n                    \"Rate\": \"0.16\",\r\n                    \"Total\": \"1.6\",\r\n                    \"Base\": \"10\",\r\n                    \"IsRetention\": \"false\",\r\n                    \"IsFederalTax\": \"true\"\r\n                }\r\n            ],\r\n            \"Total\": \"11.60\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2959,6 +4207,21 @@
 				{
 					"name": "Cancelar Cfdi",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -3008,6 +4271,21 @@
 				{
 					"name": "Retenciones v1",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -3018,7 +4296,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"FolioInt\": \"0001\",\r\n    \"FechaExp\": \"2023-05-07T08:08:01-06:00\",\r\n    \"CveRetenc\": \"16\",\r\n    \"Emisor\": {\r\n        \"RFCEmisor\": \"EKU9003173C9\",\r\n        \"NomDenRazSocE\": \"ESCUELA KEMPER URGATE\",\r\n        \"RegimenFiscalE\": \"601\"\r\n    },\r\n    \"Receptor\": {\r\n        \"Nacionalidad\": \"Nacional\",\r\n        \"Nacional\": {\r\n            \"RFCRecep\": \"CACX7605101P8\",\r\n            \"NomDenRazSocR\": \"XOCHILT CASAS CHAVEZ\",\r\n            \"DomicilioFiscalR\": \"10740\"\r\n        }\r\n    },\r\n    \"Periodo\": {\r\n        \"MesIni\": \"08\",\r\n        \"MesFin\": \"08\",\r\n        \"Ejerc\": \"2022\"\r\n    },\r\n    \"Totales\": {\r\n        \"montoTotOperacion\": \"1681.06\",\r\n        \"montoTotGrav\": \"1681.06\",\r\n        \"montoTotExent\": \"0.00\",\r\n        \"montoTotRet\": \"151.2906\",\r\n        \"ImpRetenidos\": [\r\n            {\r\n                \"BaseRet\": \"1681.06\",\r\n                \"Impuesto\": \"01\",\r\n                \"MontoRet\": \"16.8106\",\r\n                \"TipoPagoRet\": \"Pago definitivo\"\r\n            },\r\n            {\r\n                \"BaseRet\": \"268.96\",\r\n                \"Impuesto\": \"02\",\r\n                \"MontoRet\": \"134.48\",\r\n                \"TipoPagoRet\": \"Pago definitivo\"\r\n            }\r\n        ]\r\n    }\r\n    \r\n}",
+							"raw": "{\r\n    \"FolioInt\": \"0001\",\r\n    \"FechaExp\": \"2023-05-07T08:08:01-06:00\",\r\n    \"CveRetenc\": \"16\",\r\n    \"Emisor\": {\r\n        \"RFCEmisor\": \"EKU9003173C9\",\r\n        \"NomDenRazSocE\": \"ESCUELA KEMPER URGATE\",\r\n        \"RegimenFiscalE\": \"601\"\r\n    },\r\n    \"Receptor\": {\r\n        \"Nacionalidad\": \"Nacional\",\r\n        \"Nacional\": {\r\n            \"RFCRecep\": \"CACX7605101P8\",\r\n            \"NomDenRazSocR\": \"XOCHILT CASAS CHAVEZ\",\r\n            \"DomicilioFiscalR\": \"36257\"\r\n        }\r\n    },\r\n    \"Periodo\": {\r\n        \"MesIni\": \"08\",\r\n        \"MesFin\": \"08\",\r\n        \"Ejerc\": \"2022\"\r\n    },\r\n    \"Totales\": {\r\n        \"montoTotOperacion\": \"1681.06\",\r\n        \"montoTotGrav\": \"1681.06\",\r\n        \"montoTotExent\": \"0.00\",\r\n        \"montoTotRet\": \"151.2906\",\r\n        \"ImpRetenidos\": [\r\n            {\r\n                \"BaseRet\": \"1681.06\",\r\n                \"Impuesto\": \"01\",\r\n                \"MontoRet\": \"16.8106\",\r\n                \"TipoPagoRet\": \"Pago definitivo\"\r\n            },\r\n            {\r\n                \"BaseRet\": \"268.96\",\r\n                \"Impuesto\": \"02\",\r\n                \"MontoRet\": \"134.48\",\r\n                \"TipoPagoRet\": \"Pago definitivo\"\r\n            }\r\n        ]\r\n    }\r\n    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3040,6 +4318,21 @@
 				{
 					"name": "Retenciones v2",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -3050,7 +4343,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"FolioInt\": \"0001\",\r\n    \"FechaExp\": \"2023-05-07T08:08:01\",\r\n    \"CveRetenc\": \"01\",\r\n    \"LugarExpRetenc\": \"78000\",\r\n    \"Emisor\": {\r\n        \"RFCEmisor\": \"EKU9003173C9\",\r\n        \"NomDenRazSocE\": \"ESCUELA KEMPER URGATE\",\r\n        \"RegimenFiscalE\": \"601\"\r\n    },\r\n    \"Receptor\": {\r\n        \"Nacionalidad\": \"Nacional\",\r\n        \"Nacional\": {\r\n            \"RFCRecep\": \"CACX7605101P8\",\r\n            \"NomDenRazSocR\": \"XOCHILT CASAS CHAVEZ\",\r\n            \"DomicilioFiscalR\": \"10740\"\r\n        }\r\n    },\r\n    \"Periodo\": {\r\n        \"MesIni\": \"01\",\r\n        \"MesFin\": \"01\",\r\n        \"Ejerc\": \"2023\"\r\n    },\r\n    \"Totales\": {\r\n        \"montoTotOperacion\": \"1681.06\",\r\n        \"montoTotGrav\": \"1681.06\",\r\n        \"montoTotExent\": \"0.00\",\r\n        \"montoTotRet\": \"151.29\",\r\n        \"ImpRetenidos\": [\r\n            {\r\n                \"BaseRet\": \"1681.06\",\r\n                \"Impuesto\": \"01\",\r\n                \"MontoRet\": \"16.81\",\r\n                \"TipoPagoRet\": \"04\"\r\n            },\r\n            {\r\n                \"BaseRet\": \"268.96\",\r\n                \"Impuesto\": \"02\",\r\n                \"MontoRet\": \"134.48\",\r\n                \"TipoPagoRet\": \"01\"\r\n            }\r\n        ]\r\n    }\r\n    \r\n}",
+							"raw": "{\r\n    \"FolioInt\": \"0001\",\r\n    \"FechaExp\": \"2023-05-07T08:08:01\",\r\n    \"CveRetenc\": \"01\",\r\n    \"LugarExpRetenc\": \"78000\",\r\n    \"Emisor\": {\r\n        \"RFCEmisor\": \"EKU9003173C9\",\r\n        \"NomDenRazSocE\": \"ESCUELA KEMPER URGATE\",\r\n        \"RegimenFiscalE\": \"601\"\r\n    },\r\n    \"Receptor\": {\r\n        \"Nacionalidad\": \"Nacional\",\r\n        \"Nacional\": {\r\n            \"RFCRecep\": \"CACX7605101P8\",\r\n            \"NomDenRazSocR\": \"XOCHILT CASAS CHAVEZ\",\r\n            \"DomicilioFiscalR\": \"36257\"\r\n        }\r\n    },\r\n    \"Periodo\": {\r\n        \"MesIni\": \"01\",\r\n        \"MesFin\": \"01\",\r\n        \"Ejerc\": \"2023\"\r\n    },\r\n    \"Totales\": {\r\n        \"montoTotOperacion\": \"1681.06\",\r\n        \"montoTotGrav\": \"1681.06\",\r\n        \"montoTotExent\": \"0.00\",\r\n        \"montoTotRet\": \"151.29\",\r\n        \"ImpRetenidos\": [\r\n            {\r\n                \"BaseRet\": \"1681.06\",\r\n                \"Impuesto\": \"01\",\r\n                \"MontoRet\": \"16.81\",\r\n                \"TipoPagoRet\": \"04\"\r\n            },\r\n            {\r\n                \"BaseRet\": \"268.96\",\r\n                \"Impuesto\": \"02\",\r\n                \"MontoRet\": \"134.48\",\r\n                \"TipoPagoRet\": \"01\"\r\n            }\r\n        ]\r\n    }\r\n    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3076,6 +4369,21 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3112,6 +4420,21 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3154,6 +4477,21 @@
 				{
 					"name": "Cancelar retencion",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -3194,6 +4532,21 @@
 				{
 					"name": "Descargar Retenciones",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
