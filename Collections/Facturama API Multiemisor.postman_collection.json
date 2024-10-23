@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d840b3c8-3094-4485-a2e8-f63abb5373a6",
+		"_postman_id": "469f466c-b24b-45ca-9dba-6fa97bd65c07",
 		"name": "Facturama API Multiemisor",
 		"description": "API que permiete trabajar con multiples emidores, cargando los certificdados de cada uno de ellos.\nMejora la concurrencia.\n\nPero:\nNo tiene opcion de acceder al la interfaz web.\nNi tampoco almacena catálogos",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -11,239 +11,6 @@
 			"name": "Cfdis",
 			"item": [
 				{
-					"name": "Retenciones",
-					"item": [
-						{
-							"name": "Descargar retenciones",
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "password",
-											"value": "{{Password}}",
-											"type": "string"
-										},
-										{
-											"key": "username",
-											"value": "{{UserName}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "User-Agent",
-										"value": "{{UserName}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{SERVER}}/Retenciones/9_WuOO9h1O6n_QlE0881ow2/pdf",
-									"host": [
-										"{{SERVER}}"
-									],
-									"path": [
-										"Retenciones",
-										"9_WuOO9h1O6n_QlE0881ow2",
-										"pdf"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Filtrar Retenciones",
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "password",
-											"value": "{{Password}}",
-											"type": "string"
-										},
-										{
-											"key": "username",
-											"value": "{{UserName}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "User-Agent",
-										"value": "{{UserName}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{SERVER}}/Retenciones/T9jTRQPcxNhZySr3qEelcw2",
-									"host": [
-										"{{SERVER}}"
-									],
-									"path": [
-										"Retenciones",
-										"T9jTRQPcxNhZySr3qEelcw2"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Retenciones v1",
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "password",
-											"value": "{{Password}}",
-											"type": "string"
-										},
-										{
-											"key": "username",
-											"value": "{{UserName}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "User-Agent",
-										"value": "{{UserName}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"FolioInt\": \"0001\",\r\n    \"FechaExp\": \"2023-05-07T08:08:01-06:00\",\r\n    \"CveRetenc\": \"16\",\r\n    \"Emisor\": {\r\n        \"RFCEmisor\": \"EKU9003173C9\",\r\n        \"NomDenRazSocE\": \"ESCUELA KEMPER URGATE\",\r\n        \"RegimenFiscalE\": \"601\"\r\n    },\r\n    \"Receptor\": {\r\n        \"Nacionalidad\": \"Nacional\",\r\n        \"Nacional\": {\r\n            \"RFCRecep\": \"CACX7605101P8\",\r\n            \"NomDenRazSocR\": \"XOCHILT CASAS CHAVEZ\",\r\n            \"DomicilioFiscalR\": \"10740\"\r\n        }\r\n    },\r\n    \"Periodo\": {\r\n        \"MesIni\": \"08\",\r\n        \"MesFin\": \"08\",\r\n        \"Ejerc\": \"2022\"\r\n    },\r\n    \"Totales\": {\r\n        \"montoTotOperacion\": \"1681.06\",\r\n        \"montoTotGrav\": \"1681.06\",\r\n        \"montoTotExent\": \"0.00\",\r\n        \"montoTotRet\": \"151.2906\",\r\n        \"ImpRetenidos\": [\r\n            {\r\n                \"BaseRet\": \"1681.06\",\r\n                \"Impuesto\": \"01\",\r\n                \"MontoRet\": \"16.8106\",\r\n                \"TipoPagoRet\": \"Pago definitivo\"\r\n            },\r\n            {\r\n                \"BaseRet\": \"268.96\",\r\n                \"Impuesto\": \"02\",\r\n                \"MontoRet\": \"134.48\",\r\n                \"TipoPagoRet\": \"Pago definitivo\"\r\n            }\r\n        ]\r\n    }\r\n    \r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{SERVER}}/retenciones",
-									"host": [
-										"{{SERVER}}"
-									],
-									"path": [
-										"retenciones"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "New Request",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "User-Agent",
-										"value": "{{UserName}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"FolioInt\": \"0001\",\r\n    \"FechaExp\": \"2023-05-07T08:08:01\",\r\n    \"CveRetenc\": \"01\",\r\n    \"LugarExpRetenc\": \"78000\",\r\n    \"Emisor\": {\r\n        \"RFCEmisor\": \"EKU9003173C9\",\r\n        \"NomDenRazSocE\": \"ESCUELA KEMPER URGATE\",\r\n        \"RegimenFiscalE\": \"601\"\r\n    },\r\n    \"Receptor\": {\r\n        \"Nacionalidad\": \"Nacional\",\r\n        \"Nacional\": {\r\n            \"RFCRecep\": \"CACX7605101P8\",\r\n            \"NomDenRazSocR\": \"XOCHILT CASAS CHAVEZ\",\r\n            \"DomicilioFiscalR\": \"10740\"\r\n        }\r\n    },\r\n    \"Periodo\": {\r\n        \"MesIni\": \"01\",\r\n        \"MesFin\": \"01\",\r\n        \"Ejerc\": \"2023\"\r\n    },\r\n    \"Totales\": {\r\n        \"montoTotOperacion\": \"1681.06\",\r\n        \"montoTotGrav\": \"1681.06\",\r\n        \"montoTotExent\": \"0.00\",\r\n        \"montoTotRet\": \"151.29\",\r\n        \"ImpRetenidos\": [\r\n            {\r\n                \"BaseRet\": \"1681.06\",\r\n                \"Impuesto\": \"01\",\r\n                \"MontoRet\": \"16.81\",\r\n                \"TipoPagoRet\": \"04\"\r\n            },\r\n            {\r\n                \"BaseRet\": \"268.96\",\r\n                \"Impuesto\": \"02\",\r\n                \"MontoRet\": \"134.48\",\r\n                \"TipoPagoRet\": \"01\"\r\n            }\r\n        ]\r\n    }\r\n    \r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{SERVER}}/2/retenciones",
-									"host": [
-										"{{SERVER}}"
-									],
-									"path": [
-										"2",
-										"retenciones"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Enviar Cfdi por email",
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "{{Password}}",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "{{UserName}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "{{SERVER}}/Cfdi?cfdiType=issuedLite&cfdiId=JfDtQHaFpSy8euhsK0tXqw2&email=receptor@ejemplo.com&subject=&comments=&issuerEmail=correo_emisor@ejemplo.com",
-							"host": [
-								"{{SERVER}}"
-							],
-							"path": [
-								"Cfdi"
-							],
-							"query": [
-								{
-									"key": "cfdiType",
-									"value": "issuedLite"
-								},
-								{
-									"key": "cfdiId",
-									"value": "JfDtQHaFpSy8euhsK0tXqw2"
-								},
-								{
-									"key": "email",
-									"value": "receptor@ejemplo.com"
-								},
-								{
-									"key": "subject",
-									"value": ""
-								},
-								{
-									"key": "comments",
-									"value": ""
-								},
-								{
-									"key": "issuerEmail",
-									"value": "correo_emisor@ejemplo.com"
-								}
-							]
-						},
-						"description": "NOTA: El envío de Cfdi por correo, se realiza de la misma forma para API WEB y API Multiemisor\n\n(la misma url, y el mismo formato). Pero se diferencía en el cfdiType=issuedLite"
-					},
-					"response": []
-				},
-				{
 					"name": "Descargar Cfdi",
 					"event": [
 						{
@@ -252,7 +19,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -261,10 +29,16 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -285,8 +59,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"url": {
@@ -308,6 +81,11 @@
 				},
 				{
 					"name": "Obtener detalle del Cfdi",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -328,8 +106,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"url": {
@@ -348,6 +125,11 @@
 				},
 				{
 					"name": "Obtener acuse de cancelación",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -368,8 +150,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"url": {
@@ -389,6 +170,11 @@
 				},
 				{
 					"name": "Obtener Cfdis filtrados",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -409,8 +195,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"url": {
@@ -429,12 +214,17 @@
 								}
 							]
 						},
-						"description": "Obtiene los últimos 50 Cfdis que corresponden a los filtros aplicables"
+						"description": "Obtiene los últimos Cfdis que corresponden a los filtros aplicables"
 					},
 					"response": []
 				},
 				{
 					"name": "Obtener Cfdis filtrados Completo",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -455,8 +245,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"url": {
@@ -533,62 +322,17 @@
 									"value": "0"
 								}
 							]
-						},
-						"description": "Obtiene los últimos 50 Cfdis que corresponden a los filtros aplicables"
-					},
-					"response": []
-				},
-				{
-					"name": "CFDI 4.0 Ingreso",
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "{{Password}}",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "{{UserName}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{SERVER}}/api-lite/3/cfdis",
-							"host": [
-								"{{SERVER}}"
-							],
-							"path": [
-								"api-lite",
-								"3",
-								"cfdis"
-							]
 						}
 					},
 					"response": []
 				},
 				{
 					"name": "Status CFDI",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -609,8 +353,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"url": {
@@ -646,7 +389,138 @@
 					"response": []
 				},
 				{
+					"name": "Enviar Cfdi por email",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{SERVER}}/Cfdi?cfdiType=issuedLite&cfdiId=JfDtQHaFpSy8euhsK0tXqw2&email=receptor@ejemplo.com&subject=&comments=&issuerEmail=correo_emisor@ejemplo.com",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"Cfdi"
+							],
+							"query": [
+								{
+									"key": "cfdiType",
+									"value": "issuedLite"
+								},
+								{
+									"key": "cfdiId",
+									"value": "JfDtQHaFpSy8euhsK0tXqw2"
+								},
+								{
+									"key": "email",
+									"value": "receptor@ejemplo.com"
+								},
+								{
+									"key": "subject",
+									"value": ""
+								},
+								{
+									"key": "comments",
+									"value": ""
+								},
+								{
+									"key": "issuerEmail",
+									"value": "correo_emisor@ejemplo.com"
+								}
+							]
+						},
+						"description": "NOTA: El envío de Cfdi por correo, se realiza de la misma forma para API WEB y API Multiemisor\n\n(la misma url, y el mismo formato). Pero se diferencía en el cfdiType=issuedLite"
+					},
+					"response": []
+				},
+				{
+					"name": "CFDI 4.0 Ingreso",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{Password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{UserName}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2024-02-20T12:00:00\",\r\n    \"PaymentConditions\": \"CREDITO A SIETE DIAS\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"Exportation\": \"01\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G01\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"EDL\",\r\n            \"Description\": \"Estudios de laboratorio\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"MTS\",\r\n            \"UnitPrice\": 50,\r\n            \"Quantity\": 2.0,\r\n            \"Subtotal\": 100,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        },\r\n        {\r\n            \"ProductCode\": \"10101504\",\r\n            \"IdentificationNumber\": \"001\",\r\n            \"Description\": \"SERVICIO DE COLOCACION\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"E49\",\r\n            \"UnitPrice\": 100.0,\r\n            \"Quantity\": 15.0,\r\n            \"Subtotal\": 1500.0,\r\n            \"Discount\": 0.0,\r\n            \"TaxObject\": \"02\",\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 240.0,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 1500.0,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 1740.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api-lite/3/cfdis",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api-lite",
+								"3",
+								"cfdis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Cancelar un Cfdi",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -667,8 +541,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"body": {
@@ -703,6 +576,11 @@
 				},
 				{
 					"name": "Cancelar con Motivo",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -720,7 +598,12 @@
 							]
 						},
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{UserName}}"
+							}
+						],
 						"url": {
 							"raw": "{{SERVER}}/api-lite/cfdis/Ar3WalEzVRz4LZ5oWPfXmw2?motive=03",
 							"host": [
@@ -748,6 +631,11 @@
 			"item": [
 				{
 					"name": "Obtener CSD a partir del RFC",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -768,8 +656,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"url": {
@@ -788,6 +675,11 @@
 				},
 				{
 					"name": "Agregar CSD",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -812,8 +704,7 @@
 							},
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"body": {
@@ -836,6 +727,11 @@
 				},
 				{
 					"name": "Obtener los CSD cargados",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -856,8 +752,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"url": {
@@ -876,6 +771,11 @@
 				},
 				{
 					"name": "Actualizar CSD",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -900,8 +800,7 @@
 							},
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"body": {
@@ -925,6 +824,11 @@
 				},
 				{
 					"name": "Eliminar CSD",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -945,8 +849,7 @@
 						"header": [
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"body": {
@@ -996,6 +899,11 @@
 			"item": [
 				{
 					"name": "Complemento de pago",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -1016,14 +924,11 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"value": "application/json"
 							},
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"body": {
@@ -1046,6 +951,11 @@
 				},
 				{
 					"name": "Complemento de donativos",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -1066,19 +976,16 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
 								"value": "application/json"
 							},
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"9\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"DONST\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"DONATIVO\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Exportation\": \"01\",\r\n    \"Complemento\": {\r\n        \"Donation\": {\r\n            \"AuthorizationDate\": \"30/01/2019\",\r\n            \"AuthorizationNumber\": \"B400-05-08-2014-005\",\r\n            \"Legend\": \"El comprobante es un donativo\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"Description\": \"Cobija de lana y algodon\",\r\n            \"ProductCode\": \"20102000\",\r\n            \"IdentificationNumber\": \"FP114\",\r\n            \"Quantity\": \"3\",\r\n            \"Subtotal\": \"3000\",\r\n            \"Total\": \"3000\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"EA\",\r\n            \"UnitPrice\": \"1000\",\r\n            \"TaxObject\": \"01\"\r\n        }\r\n    ],\r\n    \"Receiver\": {\r\n        \"Rfc\": \"CACX7605101P8\",\r\n        \"CfdiUse\": \"D04\",\r\n        \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n        \"FiscalRegime\": \"605\",\r\n        \"TaxZipCode\": \"10740\"\r\n    },\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    }\r\n}"
+							"raw": "{\r\n    \"NameId\": \"9\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"DONST\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2024-02-20T12:00:00\",\r\n    \"PaymentConditions\": \"DONATIVO\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Exportation\": \"01\",\r\n    \"Complemento\": {\r\n        \"Donation\": {\r\n            \"AuthorizationDate\": \"30/01/2019\",\r\n            \"AuthorizationNumber\": \"B400-05-08-2014-005\",\r\n            \"Legend\": \"El comprobante es un donativo\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"Description\": \"Cobija de lana y algodon\",\r\n            \"ProductCode\": \"20102000\",\r\n            \"IdentificationNumber\": \"FP114\",\r\n            \"Quantity\": \"3\",\r\n            \"Subtotal\": \"3000\",\r\n            \"Total\": \"3000\",\r\n            \"Unit\": \"NO APLICA\",\r\n            \"UnitCode\": \"EA\",\r\n            \"UnitPrice\": \"1000\",\r\n            \"TaxObject\": \"01\"\r\n        }\r\n    ],\r\n    \"Receiver\": {\r\n        \"Rfc\": \"CACX7605101P8\",\r\n        \"CfdiUse\": \"D04\",\r\n        \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n        \"FiscalRegime\": \"605\",\r\n        \"TaxZipCode\": \"36257\"\r\n    },\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/api-lite/3/cfdis",
@@ -1096,6 +1003,11 @@
 				},
 				{
 					"name": "Complemento concepto por cuenta de terceros",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -1116,19 +1028,16 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"value": "application/json"
 							},
 							{
 								"key": "User-Agent",
-								"value": "{{UserName}}",
-								"type": "text"
+								"value": "{{UserName}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2023-04-10T12:55:02-06:00\",\r\n    \"PaymentConditions\": \"Por cuenta de terceros\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Exportation\": \"01\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G03\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\",\r\n        \"TaxResidence\": \"MEX\",\r\n        \"Address\": {\r\n            \"Street\": \"Guadalcazar del receptor\",\r\n            \"ExteriorNumber\": \"300\",\r\n            \"InteriorNumber\": \"A\",\r\n            \"Neighborhood\": \"Las lomas\",\r\n            \"ZipCode\": \"65000\",\r\n            \"Municipality\": \"San Luis Potosi\",\r\n            \"State\": \"San Luis Potosi\",\r\n            \"Country\": \"México\"\r\n        }\r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"25173108\",\r\n            \"Description\": \"GPS estandar pruebas\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Quantity\": 1.0,\r\n            \"UnitPrice\": 100.0,\r\n            \"Subtotal\": 100.00,\r\n            \"TaxObject\": \"02\",\r\n            \"ThirdPartyAccount\": {\r\n                \"Rfc\": \"CACX7605101P8\",\r\n                \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n                \"FiscalRegime\": \"616\",\r\n                \"TaxZipCode\": \"36257\"\r\n            },\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"NameId\": \"1\",\r\n    \"Currency\": \"MXN\",\r\n    \"Folio\": \"100\",\r\n    \"Serie\": \"FA\",\r\n    \"CfdiType\": \"I\",\r\n    \"PaymentForm\": \"03\",\r\n    \"PaymentMethod\": \"PUE\",\r\n    \"OrderNumber\": \"TEST-001\",\r\n    \"ExpeditionPlace\": \"78000\",\r\n    \"Date\": \"2024-02-20T12:00:00\",\r\n    \"PaymentConditions\": \"Por cuenta de terceros\",\r\n    \"Observations\": \"Elemento Observaciones solo visible en PDF\",\r\n    \"LogoUrl\": \"http:tu_dominio.com/imagen.jpg\",\r\n    \"Exportation\": \"01\",\r\n    \"Issuer\": {\r\n        \"Rfc\": \"EKU9003173C9\",\r\n        \"Name\": \"ESCUELA KEMPER URGATE\",\r\n        \"FiscalRegime\": \"601\"\r\n    },\r\n    \"Receiver\": {\r\n        \"Rfc\": \"URE180429TM6\",\r\n        \"CfdiUse\": \"G03\",\r\n        \"Name\": \"UNIVERSIDAD ROBOTICA ESPAÑOLA\",\r\n        \"FiscalRegime\": \"601\",\r\n        \"TaxZipCode\": \"86991\"        \r\n    },\r\n    \"Items\": [\r\n        {\r\n            \"ProductCode\": \"25173108\",\r\n            \"Description\": \"GPS estandar pruebas\",\r\n            \"UnitCode\": \"E48\",\r\n            \"Quantity\": 1.0,\r\n            \"UnitPrice\": 100.0,\r\n            \"Subtotal\": 100.00,\r\n            \"TaxObject\": \"02\",\r\n            \"ThirdPartyAccount\": {\r\n                \"Rfc\": \"CACX7605101P8\",\r\n                \"Name\": \"XOCHILT CASAS CHAVEZ\",\r\n                \"FiscalRegime\": \"616\",\r\n                \"TaxZipCode\": \"36257\"\r\n            },\r\n            \"Taxes\": [\r\n                {\r\n                    \"Total\": 16,\r\n                    \"Name\": \"IVA\",\r\n                    \"Base\": 100,\r\n                    \"Rate\": 0.16,\r\n                    \"IsRetention\": false\r\n                }\r\n            ],\r\n            \"Total\": 116\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{SERVER}}/api-lite/3/cfdis",
@@ -1190,12 +1099,12 @@
 		},
 		{
 			"key": "UserName",
-			"value": "pruebas",
+			"value": "tu_usuario",
 			"type": "string"
 		},
 		{
 			"key": "Password",
-			"value": "pruebas2011",
+			"value": "tu_contraseña",
 			"type": "string"
 		}
 	]
