@@ -7274,14 +7274,6 @@
   ],
   "variable": [
     {
-      "key": "UserName",
-      "value": ""
-    },
-    {
-      "key": "Password",
-      "value": ""
-    },
-    {
       "value": ""
     }
   ]
